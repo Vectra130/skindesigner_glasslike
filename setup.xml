@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE setup SYSTEM "../../dtd/setup.dtd">
+
+<setup>
+    <menu>
+    <submenu name="MainMenu" displaytext="{tr(submainmenu)}">
+        <parameter type="int" name="mainmenuFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
+        <parameter type="int" name="mainmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">8</parameter>
+        <parameter type="bool" name="mainmenuIcons" displaytext="{tr(icons)}">1</parameter>
+        <parameter type="bool" name="mainmenuWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
+        <parameter type="bool" name="mainmenuWidgetSysInfo" displaytext="{tr(widgetsysinfo)}">1</parameter>
+        <parameter type="bool" name="mainmenuWidgetRecordings" displaytext="{tr(widgetrecordings)}">0</parameter>
+        <parameter type="int" name="mainmenuWidgetFadeime" min="0" max="3000" displaytext="{tr(widgetfadetime)}">0</parameter>
+        <parameter type="bool" name="mainmenuTimerTypeIndicator" displaytext="{tr(timertypeindicator)}">1</parameter>
+        <parameter type="bool" name="mainmenuRecBlink" displaytext="{tr(recblink)}">1</parameter>
+    </submenu>
+    <submenu name="DefaultMenu" displaytext="{tr(subdisplaymenudefault)}">
+        <parameter type="int" name="defaultmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">20</parameter>
+    </submenu>
+    <submenu name="Channel" displaytext="{tr(subdisplaychannel)}">
+        <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
+        <parameter type="bool" name="channelWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
+        <parameter type="int" name="channelWidgetWeatherPosx" min="0" max="80" displaytext="{tr(widgetweatherposx)}">1</parameter>
+        <parameter type="int" name="channelWidgetWeatherPosy" min="0" max="86" displaytext="{tr(widgetweatherposy)}">1</parameter>
+        <parameter type="int" name="channelWidgetClockPosx" min="0" max="80" displaytext="{tr(widgetclockposx)}">79</parameter>
+        <parameter type="int" name="channelWidgetClockPosy" min="0" max="86" displaytext="{tr(widgetclockposy)}">1</parameter>
+        <parameter type="int" name="channelFontSize" min="0" max="30" displaytext="{tr(fontsize)}">20</parameter>
+        <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
+    </submenu>
+    <submenu name="Volume" displaytext="{tr(subdisplayvolume)}">
+        <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
+    </submenu>
+    <submenu name="Message" displaytext="{tr(subdisplaymessage)}">
+        <parameter type="int" name="messageFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">300</parameter>
+    </submenu>
+    <submenu name="Schedules" displaytext="{tr(subdisplaymenuschedules)}">
+        <parameter type="int" name="schedulesFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="schedulesDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">2000</parameter>
+        <parameter type="int" name="schedulesNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">12</parameter>
+    </submenu>
+    <submenu name="Channels" displaytext="{tr(subdisplaymenuchannels)}">
+        <parameter type="int" name="channelsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="channelsDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">2000</parameter>
+        <parameter type="int" name="channelsNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">12</parameter>
+    </submenu>
+    <submenu name="Plugins" displaytext="{tr(subplugins)}">
+    <submenu name="TvGuideNg" displaytext="{tr(subtvguide)}">
+        <parameter type="bool" name="tvguideChanNumber" displaytext="{tr(channumber)}">1</parameter>
+        <parameter type="bool" name="tvguideGridLineHorizontal" displaytext="{tr(gridlinehorizontal)}">1</parameter>
+        <parameter type="bool" name="tvguideGridLineVertical" displaytext="{tr(gridlinevertical)}">1</parameter>
+        <parameter type="int" name="tvguideGridFontSize" min="10" max="80" displaytext="{tr(gridfontsize)}">60</parameter>
+        <parameter type="bool" name="tvguideRecBlink" displaytext="{tr(recblink)}">0</parameter>
+    </submenu>
+    </submenu>
+    </menu>
+
+    <!--
+    translations of displaytexts
+    -->
+    <translations>
+        <token name="tr(icons)">
+            <trans lang="en_EN">Show Icons</trans>
+            <trans lang="de_DE">Icons anzeigen</trans>
+        </token>
+        <token name="tr(fadetime)">
+            <trans lang="en_EN">Fade time in ms</trans>
+            <trans lang="de_DE">Einblendzeit in ms</trans>
+        </token>
+        <token name="tr(widgetfadetime)">
+            <trans lang="en_EN">Widget Fade time in ms</trans>
+            <trans lang="de_DE">Widget Einblendzeit in ms</trans>
+        </token>
+        <token name="tr(nummenuitems)">
+            <trans lang="en_EN">Num Items</trans>
+            <trans lang="de_DE">Anzahl Menüelemente</trans>
+        </token>
+        <token name="tr(widgetweather)">
+            <trans lang="en_EN">Show weather widget</trans>
+            <trans lang="de_DE">Wetter Widget anzeigen</trans>
+        </token>
+        <token name="tr(widgetsysinfo)">
+            <trans lang="en_EN">Show sysinfo widget</trans>
+            <trans lang="de_DE">Sysinfo Widget anzeigen</trans>
+        </token>
+        <token name="tr(widgetups)">
+            <trans lang="en_EN">Show UPS widget</trans>
+            <trans lang="de_DE">USV Widget anzeigen</trans>
+        </token>
+        <token name="tr(widgetrecordings)">
+            <trans lang="en_EN">Show last-recordings widget</trans>
+            <trans lang="de_DE">Letzte-Aufzeichnungen Widget anzeigen</trans>
+        </token>
+        <token name="tr(timertypeindicator)">
+            <trans lang="en_EN">Show local/server timer indicator</trans>
+            <trans lang="de_DE">Zeige Lokal/Server Timer Indikator</trans>
+        </token>
+        <token name="tr(descriptiondelay)">
+            <trans lang="en_EN">Description delay in ms</trans>
+            <trans lang="de_DE">Verzögerung der Detailinfos in ms</trans>
+        </token>
+        <token name="tr(vectrasetup)">
+            <trans lang="en_EN">Setup for my system</trans>
+            <trans lang="de_DE">Setup für mein eigenes System</trans>
+        </token>
+        <token name="tr(widgetweatherposx)">
+            <trans lang="en_EN">X Position of weather widget (%)</trans>
+            <trans lang="de_DE">X Position des Wetter Widget (%)</trans>
+        </token>
+        <token name="tr(widgetweatherposy)">
+            <trans lang="en_EN">Y Position of weather widget (%)</trans>
+            <trans lang="de_DE">Y Position des Wetter Widget (%)</trans>
+        </token>
+        <token name="tr(widgetclockposx)">
+            <trans lang="en_EN">X Position of clock widget (%)</trans>
+            <trans lang="de_DE">X Position des Uhr Widget (%)</trans>
+        </token>
+        <token name="tr(widgetclockposy)">
+            <trans lang="en_EN">Y Position of clock widget (%)</trans>
+            <trans lang="de_DE">Y Position des Uhr Widget (%)</trans>
+        </token>
+        <token name="tr(fontsize)">
+            <trans lang="en_EN">Font size</trans>
+            <trans lang="de_DE">Schriftgröße</trans>
+        </token>
+        <token name="tr(recblink)">
+            <trans lang="en_EN">Blinking REC Icon</trans>
+            <trans lang="de_DE">Blinkendes Aufnahme Symbol</trans>
+        </token>
+        <token name="tr(subgeneral)">
+            <trans lang="en_EN">General</trans>
+            <trans lang="de_DE">Allgemein</trans>
+        </token>
+        <token name="tr(submainmenu)">
+            <trans lang="en_EN">Main menu</trans>
+            <trans lang="de_DE">Hauptmenü</trans>
+        </token>
+        <token name="tr(subdisplaychannel)">
+            <trans lang="en_EN">Channel switch</trans>
+            <trans lang="de_DE">Kanalwechsel</trans>
+        </token>
+        <token name="tr(subdisplayvolume)">
+            <trans lang="en_EN">Volume</trans>
+            <trans lang="de_DE">Lautstärke</trans>
+        </token>
+        <token name="tr(subdisplaymenudefault)">
+            <trans lang="en_EN">Settings menus</trans>
+            <trans lang="de_DE">Einstellungs Menüs</trans>
+        </token>
+        <token name="tr(subdisplaymessage)">
+            <trans lang="en_EN">Messages</trans>
+            <trans lang="de_DE">Nachrichten</trans>
+        </token>
+        <token name="tr(subdisplaymenurecordings)">
+            <trans lang="en_EN">Recordings</trans>
+            <trans lang="de_DE">Aufnahmen</trans>
+        </token>
+        <token name="tr(subdisplaymenuschedules)">
+            <trans lang="en_EN">Schedule</trans>
+            <trans lang="de_DE">Programmführer</trans>
+        </token>
+        <token name="tr(subdisplaymenuchannels)">
+            <trans lang="en_EN">Channels</trans>
+            <trans lang="de_DE">Kanäle</trans>
+        </token>
+        <token name="tr(subspecial)">
+            <trans lang="en_EN">Vectra's special settings ;-)</trans>
+            <trans lang="de_DE">Vectra's Spezialeinstellungen ;-)</trans>
+        </token>
+        <token name="tr(subplugins)">
+            <trans lang="en_EN">Plugins</trans>
+            <trans lang="de_DE">Plugins</trans>
+        </token>
+        <token name="tr(subtvguide)">
+            <trans lang="en_EN">TV Guide NG</trans>
+            <trans lang="de_DE">TV Guide NG</trans>
+        </token>
+        <token name="tr(channumber)">
+            <trans lang="en_EN">Show channel numbers</trans>
+            <trans lang="de_DE">Kanalnummern anzeigen</trans>
+        </token>
+        <token name="tr(gridlinehorizontal)">
+            <trans lang="en_EN">Show horizontal grid separator</trans>
+            <trans lang="de_DE">Horizontale Trennlinien im Grid anzeigen</trans>
+        </token>
+        <token name="tr(gridlinevertical)">
+            <trans lang="en_EN">Show vertical grid separator</trans>
+            <trans lang="de_DE">Vertikale Trennlinien im Grid anzeigen</trans>
+        </token>
+        <token name="tr(gridfontsize)">
+            <trans lang="en_EN">Fontsize in grid</trans>
+            <trans lang="de_DE">Schriftgröße im Grid</trans>
+        </token>
+    </translations>
+</setup>
