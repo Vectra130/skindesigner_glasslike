@@ -207,7 +207,7 @@
         <trans lang="en_EN">Release Date</trans>
         <trans lang="de_DE">Erscheinungsdatum</trans>
     </token>
-    <token name="tr(Luntime)">
+    <token name="tr(Runtime)">
         <trans lang="en_EN">Runtime</trans>
         <trans lang="de_DE">Laufzeit</trans>
     </token>
@@ -382,5 +382,9 @@
         <token name="tr(UPS)">
             <trans lang="en_EN">UPS</trans>
             <trans lang="de_DE">USV</trans>
+        </token>
+        <token name="tr(runs)">
+            <trans lang="en_EN">runs</trans>
+            <trans lang="de_DE">läuft</trans>
         </token>
 </translations>

@@ -20,6 +20,11 @@
 
 	<var type="int" name="mainmenuWidgetDisc">1</var>
 	<var type="int" name="mainmenuWidgetUps">1</var>
+
+	<var type="int" name="mainmenuWidgetShiftTime">2000</var>
+	<var type="int" name="mainmenuWidgetDelayTimers">500</var>
+	<var type="int" name="mainmenuWidgetDelayInfo">1000</var>
+
 	<var type="int" name="vectraSetup">1</var>
     </variables>
 
@@ -42,10 +47,16 @@
         <color name="clrTransYellow">99E2DA00</color>
         <color name="clrTransBlue">99007FE2</color>
         <color name="clrTransparent">00000000</color>
+        <color name="clrDarkRed">FF640000</color>
         <color name="clrFontMenuItem">AAAAAAAA</color>
         <color name="clrFontMenuItemSelected">FFFFFFFF</color>
         <color name="clrFontInactive">FF858585</color>
+        <color name="clrFontMenuBright">FFFFFFFF</color>
+        <color name="clrFontMenuDark">AAAAAAAA</color>
+        <color name="clrFontMenuItemBright">FFFFFFFF</color>
+        <color name="clrFontMenuItemDark">AAAAAAAA</color>
         <color name="clrProgressbar">FF666666</color>
+        <color name="clrProgressbarBg">FF3A3A3A</color>
 	<color name="clrWidgetStatusBarGreen">FF33FF33</color>	
         <color name="clrWidgetStatusBarRed">FFFF3333</color>	
         <color name="clrWidgetStatusBarYellow">FFFFFF33</color>	

@@ -9,7 +9,8 @@
     </header>
 -->
     <scrollbar>
-        <area condition="{vectraSetup}" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2 + {areaheight}*{offset}/1000" width="{areawidth}*0.01 - 6" height="{areaheight}*{height}/1000 - {areawidth}*0.02 - 6" layer="2">
+	<!-- scrollbar -->
+        <area x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2 + {areaheight}*{offset}/1000" width="{areawidth}*0.01 - 6" height="{areaheight}*{height}/1000 - {areawidth}*0.02 - 6" layer="2">
 	    <drawellipse x="0" y="0" width="100%" height="{areawidth}" quadrant="0" color="{clrProgressbar}" />
 	    <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areawidth} - 2" quadrant="0" color="{clrProgressbarBg}" />
 	    <drawellipse x="0" y="{areaheight}-{areawidth}" width="100%" height="{areawidth}" quadrant="0" color="{clrProgressbar}" />

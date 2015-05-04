@@ -1,12 +1,17 @@
 <menumain x="0" y="0" width="100%" height="100%" fadetime="{mainmenuFadeTime}" scaletvx="{areawidth}*0.01" scaletvy="{areaheight}*0.695" scaletvwidth="{areawidth}*0.29" scaletvheight="{areaheight}*0.3" >
     <scrollbar>
-        <area condition="{vectraSetup}" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2 + {areaheight}*{offset}/1000" width="{areawidth}*0.01 - 6" height="{areaheight}*{height}/1000 - {areawidth}*0.02 - 6" layer="2">
-	    <drawellipse x="0" y="0" width="100%" height="{areawidth}" quadrant="0" color="{clrProgressbar}" />
-	    <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areawidth} - 2" quadrant="0" color="{clrProgressbarBg}" />
-	    <drawellipse x="0" y="{areaheight}-{areawidth}" width="100%" height="{areawidth}" quadrant="0" color="{clrProgressbar}" />
-	    <drawellipse x="0" y="{areaheight}-{areawidth}" width="{areawidth} - 2" height="{areawidth} - 2" quadrant="0" color="{clrProgressbarBg}" />
-            <drawrectangle x="0" y="{areawidth}/2" width="{areawidth} - 2" height="{areaheight} - {areawidth}" color="{clrProgressbarBg}" />
-            <drawrectangle x="{areawidth} - 2" y="{areawidth}/2" width="2" height="{areaheight} - {areawidth}" color="{clrProgressbar}" />
+	<!-- scrollbar -->
+        <area x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2 + {areaheight}*{offset}/1000" width="{areawidth}*0.01 - 6" height="{areaheight}*{height}/1000 - {areawidth}*0.02 - 6" layer="2">
+	    <drawellipse name="scroll_top" x="0" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="2" color="{clrProgressbar}" />
+	    <drawellipse x="0" y="0" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="2" color="{clrProgressbarBg}" />
+	    <drawellipse x="{areawidth}/2" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="1" color="{clrProgressbar}" />
+	    <drawellipse x="{areawidth}/2 - 1" y="0" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="1" color="{clrProgressbarBg}" />
+	    <drawellipse name="scroll_bottom" x="0" y="{areaheight}-{areawidth}/2" width="{areawidth}/2" height="{areawidth}/2" quadrant="3" color="{clrProgressbar}" />
+	    <drawellipse x="0" y="{areaheight}-{areawidth}/2" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="3" color="{clrProgressbarBg}" />
+	    <drawellipse x="{areawidth}/2" y="{areaheight}-{areawidth}/2" width="{areawidth}/2" height="{areawidth}/2" quadrant="4" color="{clrProgressbar}" />
+	    <drawellipse x="{areawidth}/2 - 1" y="{areaheight}-{areawidth}/2" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="4" color="{clrProgressbarBg}" />
+            <drawrectangle x="0" y="{height(scroll_top)} - 2" width="{areawidth} - 2" height="{posy(scroll_bottom)} - {width(scroll_top)} + 2" color="{clrProgressbarBg}" />
+            <drawrectangle x="{areawidth} - 2" y="{height(scroll_top)}" width="2" height="{posy(scroll_bottom)} - {width(scroll_top)}" color="{clrProgressbar}" />
         </area>
      </scrollbar>
 
@@ -24,8 +29,11 @@
 	</area>
     </header>
  
+<!--
     <timers detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
-        <area background="true" x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="1">
+-->
+    <timers detached="true" delay="{mainmenuWidgetDelayTimers}" shifttime="{mainmenuWidgetShiftTime}" startx="{areawidth}" starty="{areawidth}*0.01">
+        <area background="true" x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
 	    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
 	    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
 	    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)}" width="15" height="15" quadrant="-2" color="{clrBlack}" />
@@ -36,10 +44,10 @@
 	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 15" y="{posy(mainframe)} + {height(mainframe)} - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
 	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
 	</area>
-        <area x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
+        <area x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="3">
 	    <drawtextvertical direction="topdown" align="center" valign="center" font="{bold}" fontsize="60%" color="{clrBlack}" text="{numtimers} {tr(Timer)}" />
 	</area>
-        <area x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
+        <area x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="3">
             <loop name="timers" x="2" y="2" orientation="vertical" rowheight="{areaheight}/5 - 6/5" columnwidth="{areawidth} - 6" overflow="cut">
                 <drawtext align="center" y="{rowheight}*0.1" font="{regular}" fontsize="{rowheight}*0.20" color="{clrGray}" text="{timers[datetime]}" />
                 <drawimage cache="true" name="logo" imagetype="channellogo" path="{timers[channelid]}" height="{rowheight}*0.27" width="{columnwidth}*0.90" align="center" y="{rowheight}*0.31" />
@@ -59,7 +67,7 @@
         </area>
     </timers>
     <!-- disc info -->
-    <discusage condition="{mainmenuWidgetDisc}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <discusage condition="{mainmenuWidgetDisc}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<area background="true" x="{areawidth}*0.31" y="{areaheight}*0.70" width="{areawidth}*0.08" height="{areawidth}*0.08" layer="1">
 	    <drawimage align="center" valign="center" imagetype="icon" path="ico_discusage" width="100%" height="100%" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="35%" color="{clrWidgetFontName}" text="{usedpercent}%" />
@@ -85,19 +93,32 @@
 <!-- info frame widgets-->
 
     <!-- weather -->
-    <currentweather condition="{mainmenuWidgetWeather}" detached="true">       
+    <currentweather condition="{mainmenuWidgetWeather}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*0.11" height="{areaheight}*0.14" layer="2">
             <drawimage imagetype="icon" path="{icon}" align="center" valign="center" width="{areaheight}*0.98" height="{areaheight}*0.98"/>
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*0.055" height="{areaheight}*0.044" layer="3">
-            <drawimage name="windicon" align="left" y="0" imagetype="icon" path="windbearing" width="{areaheight}*0.45" height="{areaheight}*0.45" />
+            <drawimage name="windicon" align="left" y="0" imagetype="icon" path="windbearing_{windbearingstring}" width="{areaheight}*0.45" height="{areaheight}*0.45" />
             <drawtext name="wind" x="{width(windicon)} + 5" width="{areawidth} - {width(windicon)} - 5" y="0" font="{regular}" fontsize="50%" color="{clrWidgetFontName}" text="{windbearingstring}" />
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + {areawidth}*0.055" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*0.055" height="{areaheight}*0.044" layer="3">
             <drawimage name="rainicon" x="{posx(rain)} - {width(rainicon)} - 5" y="0" imagetype="icon" path="rain_svg" width="{areaheight}*0.45" height="{areaheight}*0.45" />
             <drawtext name="rain" align="right" width="{areawidth} - {width(rainicon)} - 5" y="0" font="{regular}" fontsize="50%" color="{clrWidgetFontName}" text="{precipitationprobability}%" />
 	</area>
-	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + 1" y="{areaheight}*{mainmenuWidgetInfoPosy2} + 1" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
+
+	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} - 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} - 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
+            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
+	</area>
+	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} - 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
+            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
+	</area>
+	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} + 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
+            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
+	</area>
+	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} - 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} + 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
             <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
@@ -105,6 +126,7 @@
             <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrWhite}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrWhite}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
+
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1}" y="{areaheight}*{mainmenuWidgetInfoPosy4}" width="{areawidth}*0.11" height="{areaheight}*0.022" layer="3">
             <drawimage name="mintempicon" align="left" valign="center" imagetype="icon" path="mintemp" width="{areaheight}*0.4" height="{areaheight}*0.9" />
             <drawtext x="{width(mintempicon)} + 5" width="{areawidth}" valign="center" font="{regular}" fontsize="100%" color="{clrWidgetFontName}" text="{mintemperature}°C" />
@@ -117,7 +139,7 @@
     </currentweather>
 
     <!-- system -->
-    <systemload condition="{mainmenuWidgetSysInfo}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <systemload condition="{mainmenuWidgetSysInfo}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<!-- cpu load -->
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
 	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(Load)}" />
@@ -145,7 +167,7 @@
             <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="2,5" />
 	</area>
     </systemload>
-    <systemmemory condition="{mainmenuWidgetSysInfo}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <systemmemory condition="{mainmenuWidgetSysInfo}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<!-- mem -->
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy2}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
 	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(Memory)}" />
@@ -196,7 +218,7 @@
 	</area>
     </systemmemory>
 
-    <temperatures condition="{mainmenuWidgetSysInfo}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <temperatures condition="{mainmenuWidgetSysInfo}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<!-- cpu temp -->
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy3}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
 	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(Cputemp)}" />
@@ -248,7 +270,7 @@
     </temperatures>
 
     <!-- ups -->
-    <customtokens condition="{mainmenuWidgetUps}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <customtokens condition="{mainmenuWidgetUps}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
 	<!-- TIMELEFT -->
 	<area condition="isset{ctUpsSTATUS}" background="true" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy2}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
 	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(UPS)} {tr(Timeleft)}" />
@@ -442,9 +464,8 @@
 	</area>
     </customtokens>
 
-
     <!-- last recordings -->
-    <lastrecordings condition="{mainmenuWidgetRecordings}++not{mainmenuWidgetUps}" detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
+    <lastrecordings condition="{mainmenuWidgetRecordings}++not{mainmenuWidgetUps}" detached="true" delay="{mainmenuWidgetDelayInfo}" fadetime="{mainmenuWidgetFadeTime}">
         <area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*0.23" height="{areaheight}*0.04" layer="2">
 	    <drawtext align="center" valign="center" font="{regular}" fontsize="100%" color="{clrWidgetFontName}" text="{tr(Last)} {tr(Recordings)}" />
 	</area>
@@ -482,16 +503,11 @@
                 <drawtext condition="{current}" align="center" valign="center" font="{italic}" fontsize="80%" color="{clrFontMenuItemSelected}" text="{label}" />
 	    </area>
         </listelement>
-	<currentelement fadetime="0" delay="50">
+	<currentelement fadetime="200" delay="200">
 	<!-- without weather -->
 	    <area condition="not{mainmenuWidgetWeather}" x="{areawidth}*1.2*{mainmenuWidgetInfoPosx1}" y="{areaheight}*1.205 + {areawidth}*0.01" width="{areawidth}*0.11" height="{areaheight}*0.225 - {areawidth}*0.03" layer="2">
 		<drawimage align="center" valign="center" imagetype="menuicon" path="{icon}" width="100%" height="100%" />
 	    </area>
-<!--
-            <area x="45%" y="45%" width="10%" height="10%" layer="6">
-                <drawimage cache="true" imagetype="menuicon" path="{icon}" x="0" valign="center" width="{areaheight}" height="{areaheight}"/>
-            </area>
--->
         </currentelement>
     </menuitems>
 
