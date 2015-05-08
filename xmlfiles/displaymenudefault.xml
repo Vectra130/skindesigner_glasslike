@@ -65,9 +65,6 @@
         -->
         <listelement>
             <area x="0" width="100%" layer="2">
-<!--
-                <drawimage condition="not{current}" imagetype="skinpart" path="menubuttondefault" x="0" y="2%" width="{areawidth}" height="{areaheight}*0.96"/>
--->
                 <drawimage condition="{current}" imagetype="skinpart" path="menubuttonactive" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
                 <drawimage condition="not{current}" imagetype="skinpart" path="line_gray_horizontal" x="0" y="0" width="{areawidth}" height="1"/>
                 <drawimage condition="not{current}" imagetype="skinpart" path="line_gray_horizontal" x="0" y="{areaheight} - 1" width="{areawidth}" height="1"/>

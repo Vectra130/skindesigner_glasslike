@@ -3,6 +3,10 @@
         <trans lang="en_EN">new</trans>
         <trans lang="de_DE">neu</trans>
     </token>
+    <token name="tr(NEW)">
+        <trans lang="en_EN">NEW</trans>
+        <trans lang="de_DE">NEU</trans>
+    </token>
     <token name="tr(Recordings)">
         <trans lang="en_EN">Recordings</trans>
         <trans lang="de_DE">Aufzeichnungen</trans>
@@ -27,12 +31,20 @@
         <trans lang="en_EN">active</trans>
         <trans lang="de_DE">aktive</trans>
     </token>
+    <token name="tr(inactive)">
+        <trans lang="en_EN">inactive</trans>
+        <trans lang="de_DE">deaktiviert</trans>
+    </token>
     <token name="tr(Active)">
         <trans lang="en_EN">Active</trans>
         <trans lang="de_DE">Aktive</trans>
     </token>
-    <token name="tr(Timer)">
+    <token name="tr(Timers)">
         <trans lang="en_EN">Timers</trans>
+        <trans lang="de_DE">Timer</trans>
+    </token>
+    <token name="tr(Timer)">
+        <trans lang="en_EN">Timer</trans>
         <trans lang="de_DE">Timer</trans>
     </token>
     <token name="tr(Diskusage)">
@@ -235,6 +247,10 @@
         <trans lang="en_EN">Recording Length</trans>
         <trans lang="de_DE">Länge der Aufnahme</trans>
     </token>
+    <token name="tr(Programlength)">
+        <trans lang="en_EN">Program Length</trans>
+        <trans lang="de_DE">Länge der Sendung</trans>
+    </token>
     <token name="tr(Reclengthcutted)">
         <trans lang="en_EN">Cutted Recording Length</trans>
         <trans lang="de_DE">Länge der geschnittenen Aufnahme</trans>
@@ -386,5 +402,9 @@
         <token name="tr(runs)">
             <trans lang="en_EN">runs</trans>
             <trans lang="de_DE">läuft</trans>
+        </token>
+        <token name="tr(Noepg)">
+            <trans lang="en_EN">No EPG Info</trans>
+            <trans lang="de_DE">Keine EPG Infos</trans>
         </token>
 </translations>

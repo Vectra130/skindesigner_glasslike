@@ -53,9 +53,9 @@
 	<!-- title -->
 	<area condition="not{whatson}" background="true" x="{areawidth}*0.41" y="{areaheight}*0.78" width="{areawidth}*0.47 - 2" height="{areaheight}*0.08" layer="2">
             <drawtext align="center" y="0" font="{regular}" fontsize="100%" color="{clrFontMenuBright}" text="{title}" />
-<!--
-            <drawimage imagetype="skinpart" path="line_horizontal" align="center" y="{areaheight} - 3" width="{areawidth}" height="3" />
--->
+	</area>
+	<area condition="{whatson}++not{whatsonnow}++not{whatsonnext}++not{whatsonfavorites}" background="true" x="{areawidth}*0.41" y="{areaheight}*0.78" width="{areawidth}*0.47 - 2" height="{areaheight}*0.08" layer="2">
+            <drawtext align="center" y="0" font="{regular}" fontsize="100%" color="{clrFontMenuBright}" text="{tr(Schedule)}" />
 	</area>
     </header>
  
@@ -104,10 +104,6 @@
                 <drawtext name="menutext" x="{posx(starttime)} + {width(starttime)} + {areaheight}" y="{areaheight}*0.075" font="{regular}" fontsize="80%" color="{clrFontMenuItemBright}" text="{title}" />
                 <drawtext condition="isset{shorttext}" x="{posx(menutext)}+{width(menutext)}" valign="center" font="{regular}" fontsize="60%" color="{clrFontMenuItemDark}" text="     {shorttext}" />
                 <drawtext condition="{timerfull}" x="{posx(menutext)}-{areaheight}*0.83" valign="center" font="{italic}" fontsize="{areaheight}*0.5" color="{clrRed}" text="REC" />
-<!--
-                <drawimage condition="{timerfull}" imagetype="icon" path="ico_activetimer" x="{posx(menutext)}-{areaheight}*0.9" valign="center" width="{areaheight}*0.80" height="{areaheight}*0.80" />
-                <drawimage condition="{timerpartitial}" imagetype="icon" path="ico_activetimer" x="{posx(menutext)} - {areaheight}*0.7" valign="center" width="{areaheight}*0.4" height="{areaheight}*0.4" />
--->
 	    </area>
             <!-- element whatsonnow -->
             <area condition="not{separator}++{whatsonnow}" x="{areawidth}*0.02" width="{areawidth}*0.62 - 1" layer="3">
@@ -176,7 +172,9 @@
         <currentelement delay="{schedulesDescriptionDelay}" fadetime="{schedulesFadeTime}">
 	    <!-- info window -->
 	    <area condition="{whatson}" x="{areawidth}*0.41" y="{areaheight}*1.20" width="{areawidth}*0.47 - 2" height="{areaheight}*0.28" layer="2">
+<!--
                 <drawtext align="center" valign="top" font="{regular}" fontsize="45%" color="{clrFontMenuBright}" text="{tr(Schedule)}" />
+-->
                 <drawimage imagetype="skinpart" path="line_horizontal" align="center" y="{areaheight}/2 - 2" width="{areawidth}" height="3" />
                 <drawellipse x="{posx(channumber)} - {areawidth}*0.03" y="{posy(channumber)}" width="{width(channumber)} + {areawidth}*0.06" height="{height(channumber)}" color="{clrFontMenuItemDark}" quadrant="0" />
                 <drawellipse x="{posx(channumber)} - {areawidth}*0.03" y="{posy(channumber)}" width="{width(channumber)} + {areawidth}*0.06 - 3" height="{height(channumber)} - 3" color="{clrTransparent}" quadrant="0" />
@@ -196,7 +194,7 @@
             	    <drawtext align="left" y="0" font="{regular}" fontsize="30%" color="{clrFontMenuDark}" text="{schedule[start]}-{schedule[stop]} {schedule[title]} - {schedule[shorttext]}" />
 		</loop>
 	    </area>
-            <area x="{areawidth}*0.31" y="{areaheight}*1.18 + {areawidth}*0.01" width="{areawidth}*0.08" height="{areawidth}*0.06" layer="2">
+            <area x="{areawidth}*0.31" y="{areaheight}*1.23 + {areawidth}*0.01" width="{areawidth}*0.08" height="{areawidth}*0.06" layer="2">
                 <!-- logo -->
                 <drawimage name="logo" imagetype="channellogo" path="{channelid}" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	    </area>

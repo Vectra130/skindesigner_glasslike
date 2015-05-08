@@ -23,10 +23,7 @@
     <submenu name="Channel" displaytext="{tr(subdisplaychannel)}">
         <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="bool" name="channelWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
-        <parameter type="int" name="channelWidgetWeatherPosx" min="0" max="80" displaytext="{tr(widgetweatherposx)}">1</parameter>
-        <parameter type="int" name="channelWidgetWeatherPosy" min="0" max="86" displaytext="{tr(widgetweatherposy)}">1</parameter>
-        <parameter type="int" name="channelWidgetClockPosx" min="0" max="80" displaytext="{tr(widgetclockposx)}">79</parameter>
-        <parameter type="int" name="channelWidgetClockPosy" min="0" max="86" displaytext="{tr(widgetclockposy)}">1</parameter>
+        <parameter type="bool" name="channelWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
         <parameter type="int" name="channelFontSize" min="0" max="30" displaytext="{tr(fontsize)}">20</parameter>
         <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
@@ -40,6 +37,16 @@
         <parameter type="int" name="schedulesFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
         <parameter type="int" name="schedulesDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
         <parameter type="int" name="schedulesNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">12</parameter>
+    </submenu>
+    <submenu name="Timers" displaytext="{tr(subdisplaymenutimers)}">
+        <parameter type="int" name="timersFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="timersDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
+        <parameter type="int" name="timersNumMenuItems" min="6" max="12" displaytext="{tr(nummenuitems)}">7</parameter>
+    </submenu>
+    <submenu name="Recordings" displaytext="{tr(subdisplaymenurecordings)}">
+        <parameter type="int" name="recordingsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="recordingsDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
+        <parameter type="int" name="recordingsNumMenuItems" min="6" max="12" displaytext="{tr(nummenuitems)}">8</parameter>
     </submenu>
     <submenu name="Channels" displaytext="{tr(subdisplaymenuchannels)}">
         <parameter type="int" name="channelsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
@@ -81,6 +88,10 @@
             <trans lang="en_EN">Show weather widget</trans>
             <trans lang="de_DE">Wetter Widget anzeigen</trans>
         </token>
+        <token name="tr(widgetclock)">
+            <trans lang="en_EN">Show clock widget</trans>
+            <trans lang="de_DE">Uhr Widget anzeigen</trans>
+        </token>
         <token name="tr(widgetsysinfo)">
             <trans lang="en_EN">Show sysinfo widget</trans>
             <trans lang="de_DE">Sysinfo Widget anzeigen</trans>
@@ -104,22 +115,6 @@
         <token name="tr(vectrasetup)">
             <trans lang="en_EN">Setup for my system</trans>
             <trans lang="de_DE">Setup für mein eigenes System</trans>
-        </token>
-        <token name="tr(widgetweatherposx)">
-            <trans lang="en_EN">X Position of weather widget (%)</trans>
-            <trans lang="de_DE">X Position des Wetter Widget (%)</trans>
-        </token>
-        <token name="tr(widgetweatherposy)">
-            <trans lang="en_EN">Y Position of weather widget (%)</trans>
-            <trans lang="de_DE">Y Position des Wetter Widget (%)</trans>
-        </token>
-        <token name="tr(widgetclockposx)">
-            <trans lang="en_EN">X Position of clock widget (%)</trans>
-            <trans lang="de_DE">X Position des Uhr Widget (%)</trans>
-        </token>
-        <token name="tr(widgetclockposy)">
-            <trans lang="en_EN">Y Position of clock widget (%)</trans>
-            <trans lang="de_DE">Y Position des Uhr Widget (%)</trans>
         </token>
         <token name="tr(fontsize)">
             <trans lang="en_EN">Font size</trans>
@@ -160,6 +155,14 @@
         <token name="tr(subdisplaymenuschedules)">
             <trans lang="en_EN">Schedule</trans>
             <trans lang="de_DE">Programmführer</trans>
+        </token>
+        <token name="tr(subdisplaymenutimers)">
+            <trans lang="en_EN">Timers</trans>
+            <trans lang="de_DE">Timer</trans>
+        </token>
+        <token name="tr(subdisplaymenurecordings)">
+            <trans lang="en_EN">Recordings</trans>
+            <trans lang="de_DE">Aufnahmen</trans>
         </token>
         <token name="tr(subdisplaymenuchannels)">
             <trans lang="en_EN">Channels</trans>
