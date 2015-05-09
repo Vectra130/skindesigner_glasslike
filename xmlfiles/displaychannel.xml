@@ -4,7 +4,7 @@
 <displaychannel x="0" y="0" width="100%" height="100%" fadetime="{channelFadeTime}">
 
     <background>
-	<area background="true" x="{areawidth}*0.01" y="{areaheight}*0.60" width="{areawidth}*0.98" height="{areaheight}*0.39"  layer="1">
+	<area background="true" x="0" y="{areaheight}*0.59" width="{areawidth}" height="{areaheight}*0.41"  layer="1">
 	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="skinpart" path="displaychannelback" />
 	</area>
 	<!-- logo hintergrund -->
@@ -12,15 +12,17 @@
             <drawimage imagetype="skinpart" path="channellogoback" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	</area>
 	<!-- trennlinie titel -->
+<!--
 	<area background="true" x="{areawidth}*0.03" y="{areaheight}*0.74 - 2" width="{areawidth}*0.94" height="3"  layer="2">
             <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	</area>
+-->
 	<!-- trennlinie epgtitel -->
 	<area background="true" x="{areawidth}*0.03" y="{areaheight}*0.835 - 2" width="{areawidth}*0.94" height="3"  layer="2">
             <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	</area>
 	<!-- uhr -->
-	<area background="true" x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15"  layer="2">
+	<area condition="{channelWidgetClock}" background="true" x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15"  layer="2">
             <drawimage imagetype="skinpart" path="menuclockback" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	</area>
     </background>
@@ -34,12 +36,12 @@
     -->
     <channelinfo>
 	<!-- kanal nummer/name -->
-	<area x="{areawidth}*0.25" y="{areaheight}*0.60" width="{areawidth}*0.50" height="{areaheight}*0.14" layer="2">
+	<area x="{areawidth}*0.25" y="{areaheight}*0.62" width="{areawidth}*0.50" height="{areaheight}*0.10" layer="2">
 	    <drawtext name="channumber" x="0" y="0" font="{regular}" fontsize="{areaheight}" color="{clrFontChannelTitle}" text="{channelnumber}" />
 	    <drawtext x="{width(channumber)}" y="{areaheight}*0.10" font="{regular}" fontsize="{areaheight}*0.80" color="{clrFontChannelTitle}" text=" - {channelname}" />
 	</area>
 	<!-- kanallogo -->
-	<area x="{areawidth}*0.040" y="{areaheight}*0.78" width="{areawidth}*0.12" height="{areaheight}*0.11"  layer="3">
+	<area x="{areawidth}*0.040" y="{areaheight}*0.78" width="{areawidth}*0.12" height="{areaheight}*0.11"  layer="4">
             <drawimage imagetype="channellogo" path="{channelid}" x="0" y="0" width="{areawidth}" height="{areaheight}" />
 	</area>
     </channelinfo>
@@ -301,6 +303,15 @@
     {seppath}                           path for separator logo to use in imagetype "seplogo"
     -->
     <channelgroup>
+	<area x="{areawidth}*0.040" y="{areaheight}*0.78" width="{areawidth}*0.12" height="{areaheight}*0.11"  layer="4">
+            <drawimage condition="{sepexists}" imagetype="seplogo" path="{seppath}" width="{areawidth}" height="{areaheight}" align="center" valign="center" />
+            <drawimage condition="not{sepexists}" imagetype="icon" path="ico_channelsep" align="center" valign="center" width="{areaheight}" height="{areaheight}"/>
+        </area>
+	<area x="{areawidth}*0.25" y="{areaheight}*0.80" width="{areawidth}*0.50" height="{areaheight}*0.07"  layer="3">
+            <drawtext x="{areaheight}*1.25" width="{areawidth} - {areaheight}*2.5" align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrFontChannelTitle}" text="{group}" />
+            <drawimage imagetype="icon" path="ico_arrow_left" align="left" valign="center" width="{areaheight}" height="{areaheight}"/>
+            <drawimage imagetype="icon" path="ico_arrow_right" align="right" valign="center" width="{areaheight}" height="{areaheight}"/>
+        </area>             
     </channelgroup>
 
     <!-- Available Variables signalquality:
@@ -333,8 +344,10 @@
     {devices[channelid]}        ID of the currently tuned channel
     {devices[source]}           source of the currently tuned channel
     -->
+<!--
     <devices mode="full|light">
     </devices>
+-->
 
     <!-- Available Variables currentweather:
     {timestamp}                 timestamp of forecast in dd.mm hh:mm
@@ -357,28 +370,28 @@
     {ozone}                     ozone value in DU
     -->
     <currentweather>
-        <area x="{areawidth}*0.10 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="3">
+        <area condition="{channelWidgetWeather}" x="{areawidth}*0.10 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="3">
             <drawimage name="weathericon" imagetype="skinpart" path="weather/{icon}" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
 	</area>
-        <area x="{areawidth}*0.10 - {areaheight}*0.075 - 1" y="{areaheight}*0.59 - 1" width="{areaheight}*0.15" height="{areaheight}*0.07" layer="4">
-	    <drawtext x="{areawidth}/2 - {width(temp)}/2 - 3" y="{areaheight}/2 - {height(temp)}" width="{areawidth}" font="{regular}" fontsize="{areaheight}" color="{clrBlack}" text="{temperature}°C" />
-	    <drawtext x="{areawidth}/2 - {width(temp)}/2 + 3" y="{areaheight}/2 - {height(temp)}" width="{areawidth}" font="{regular}" fontsize="{areaheight}" color="{clrBlack}" text="{temperature}°C" />
+        <area condition="{channelWidgetWeather}" x="{areawidth}*0.10 - {areaheight}*0.075 - 1" y="{areaheight}*0.59 - 1" width="{areaheight}*0.15" height="{areaheight}*0.07" layer="4">
+	    <drawtext x="{areawidth}/2 - {width(temp)}/2 - 3" y="{areaheight}/2 - {height(temp)}" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.95" color="{clrBlack}" text="{temperature}°C" />
+	    <drawtext x="{areawidth}/2 - {width(temp)}/2 + 5" y="{areaheight}/2 - {height(temp)} + 2" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.95" color="{clrBlack}" text="{temperature}°C" />
 <!--
 	    <drawtext x="{areawidth}/2 - {width(temp)}/2 + 2" y="{areaheight}/2 - {height(temp)} + 2" width="{areawidth}" font="{regular}" fontsize="{areaheight} - 4" color="{clrBlack}" text="{temperature}°C" />
 	    <drawtext x="{areawidth}/2 - {width(temp)}/2 - 2" y="{areaheight}/2 - {height(temp)} + 2" width="{areawidth}" font="{regular}" fontsize="{areaheight} - 4" color="{clrBlack}" text="{temperature}°C" />
 -->
-	    <drawtext name="temp" x="{areawidth}/2 - {width(temp)}/2" y="{areaheight}/2 - {height(temp)} + 2" width="{areawidth}" font="{regular}" fontsize="{areaheight}" color="{clrWhite}" text="{temperature}°C" />
+	    <drawtext name="temp" x="{areawidth}/2 - {width(temp)}/2" y="{areaheight}/2 - {height(temp)} + 2" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.95" color="{clrWhite}" text="{temperature}°C" />
 	</area>
 
-        <area x="{areawidth}*0.02" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetWeather}" x="{areawidth}*0.02" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
             <drawimage name="mintempicon" imagetype="skinpart" path="weather/mintemp" align="left" y="{areaheight}*0.35" width="{areaheight}*0.30" height="{areaheight}*0.60"/>
 	    <drawtext x="{width(mintempicon)} + 2" valign="bottom" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.65" color="{clrFontWidgetBright}" text="{mintemperature}°C" />
 	</area>
-        <area x="{areawidth}*0.13" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetWeather}" x="{areawidth}*0.13" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
             <drawimage name="maxtempicon" imagetype="skinpart" path="weather/maxtemp" align="right" y="{areaheight}*0.35" width="{areaheight}*0.30" height="{areaheight}*0.60"/>
 	    <drawtext name="maxtemptext" x="{posx(maxtempicon)} - {width(mactemptext)} - 2" valign="bottom" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.65" color="{clrFontWidgetBright}" text="{maxtemperature}°C" />
 	</area>
-        <area x="{areawidth}*0.02" y="{areaheight}*0.70" width="{areawidth}*0.16" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetWeather}" x="{areawidth}*0.02" y="{areaheight}*0.70" width="{areawidth}*0.16" height="{areaheight}*0.05" layer="2">
 	    <drawtext align="center" valign="top" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.70" color="{clrFontWidgetBright}" text="{summary}" />
 	</area>
     </currentweather>
@@ -400,6 +413,18 @@
     {isbanner}                          true if image is a banner, false if it is a poster
     -->
     <scrapercontent>
+        <area condition="{channelWidgetBanner}++{hasbanner}" x="{areawidth}/2 - {areaheight}*0.14*{mediawidth}/{mediaheight}/2 + {areaheight}*0.14*0.15" y="1%" width="{areaheight}*0.14*{mediawidth}/{mediaheight} - {areaheight}*0.14*0.3" height="14%" layer="2">
+            <drawimage name="bannerback" imagetype="skinpart" path="banner_back" align="center" valign="center"  width="{areawidth}" height="{areaheight}"/>
+        </area>
+        <area condition="{channelWidgetBanner}++{hasbanner}" x="{areawidth}/2 - {areaheight}*0.14*{mediawidth}/{mediaheight}/2 + {areaheight}*0.14*0.022727" y="{areaheight}*0.01 + {areaheight}*0.14*0.022727" width="{areaheight}*0.14*{mediawidth}/{mediaheight} - {areaheight}*0.14*0.022727*2" height="{areaheight}*0.14 - {areaheight}*0.14*0.022727*3" layer="3">
+            <drawimage imagetype="image" path="{mediapath}" align="center" valign="center"  width="{areawidth}" height="{areaheight}"/>
+        </area>
+        <area condition="{channelWidgetPoster}++{hasposter}" x="{areawidth} -{areaheight}*0.5*{posterwidth}/{posterheight}" y="1%" width="{areaheight}*0.5*{posterwidth}/{posterheight}" height="50%" layer="2">
+            <drawimage name="poster" imagetype="image" path="{posterpath}" x="0" y="0" align="center" valign="center" width="{areaheight} * 0.83  * {posterwidth} / {posterheight}" height="{areaheight} * 0.83"/>
+        </area>
+        <area condition="{channelWidgetPoster}++{hasposter}" x="{areawidth}-{areaheight}*0.5*{posterwidth}/{posterheight}" y="1%" width="{areaheight}*0.5*{posterwidth}/{posterheight}" height="50%" layer="3">
+            <drawimage imagetype="skinpart" path="poster_top" x="0" y="0" valign="top" align="center" width="{areaheight} * 0.88  * {posterwidth} / {posterheight}" height="{areaheight} * 0.95" />
+        </area>
     </scrapercontent>
 
     <!-- Available Variables datetime:
@@ -414,13 +439,13 @@
     {year}                              year in yyyy
     -->
     <datetime>
-        <area x="{areawidth}*0.82" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.82" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
 	    <drawtext align="left" valign="bottom" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.80" color="{clrFontWidgetBright}" text="{dayleadingzero}.{month}." />
 	</area>
-        <area x="{areawidth}*0.93" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.93" y="{areaheight}*0.65" width="{areawidth}*0.05" height="{areaheight}*0.05" layer="2">
 	    <drawtext align="right" valign="bottom" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.80" color="{clrFontWidgetBright}" text="{time}" />
 	</area>
-        <area x="{areawidth}*0.82" y="{areaheight}*0.70" width="{areawidth}*0.16" height="{areaheight}*0.05" layer="2">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.82" y="{areaheight}*0.70" width="{areawidth}*0.16" height="{areaheight}*0.05" layer="2">
 	    <drawtext align="center" valign="top" width="{areawidth}" font="{regular}" fontsize="{areaheight}*0.70" color="{clrFontWidgetBright}" text="{dayname}" />
 	</area>
     </datetime>
@@ -432,13 +457,13 @@
     {hmins}                  current "hourminutes" to display an hour hand
     -->
     <time>
-        <area x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="3">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="3">
             <drawimage imagetype="skinpart" path="watchhands/s_{sec}" x="0" y="0" width="100%" height="100%"/>
         </area>
-        <area x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="4">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="4">
             <drawimage imagetype="skinpart" path="watchhands/m_{min}" x="0" y="0" width="100%" height="100%"/>
         </area>
-        <area x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="5">
+        <area condition="{channelWidgetClock}" x="{areawidth}*0.90 - {areaheight}*0.075" y="{areaheight}*0.55" width="{areaheight}*0.15" height="{areaheight}*0.15" layer="5">
             <drawimage imagetype="skinpart" path="watchhands/h_{hmins}" x="0" y="0" width="100%" height="100%"/>
         </area>
     </time>

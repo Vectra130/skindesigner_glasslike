@@ -107,23 +107,23 @@
 	</area>
 
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} - 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} - 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
-            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext y="0" width="{areawidth}" align="center" font="{regular}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} - 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
-            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext y="0" width="{areawidth}" align="center" font="{regular}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} + 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} + 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
-            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext y="0" width="{areawidth}" align="center" font="{regular}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1} - 2" y="{areaheight}*{mainmenuWidgetInfoPosy2} + 2" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="3">
-            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
+            <drawtext y="0" width="{areawidth}" align="center" font="{regular}" fontsize="70%" color="{clrGray}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrGray}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
 	<area x="{areawidth}*{mainmenuWidgetInfoPosx1}" y="{areaheight}*{mainmenuWidgetInfoPosy2}" width="{areawidth}*0.11" height="{areaheight}*0.08" layer="4">
-            <drawtext y="0" width="{areawidth}" align="center" font="{digital}" fontsize="70%" color="{clrWhite}" text="{temperature} 'C" />
+            <drawtext y="0" width="{areawidth}" align="center" font="{regular}" fontsize="70%" color="{clrWhite}" text="{temperature} 'C" />
             <drawtext valign="bottom" width="{areawidth}" align="center" font="{regular}" fontsize="30%" color="{clrWhite}" text="{tr(Felt)}: {apparenttemperature}°C" />
 	</area>
 

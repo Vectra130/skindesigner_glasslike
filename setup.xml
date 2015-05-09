@@ -24,7 +24,8 @@
         <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="bool" name="channelWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
         <parameter type="bool" name="channelWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
-        <parameter type="int" name="channelFontSize" min="0" max="30" displaytext="{tr(fontsize)}">20</parameter>
+        <parameter type="bool" name="channelWidgetBanner" displaytext="{tr(widgetbanner)}">1</parameter>
+        <parameter type="bool" name="channelWidgetPoster" displaytext="{tr(widgetposter)}">1</parameter>
         <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
     <submenu name="Volume" displaytext="{tr(subdisplayvolume)}">
@@ -91,6 +92,14 @@
         <token name="tr(widgetclock)">
             <trans lang="en_EN">Show clock widget</trans>
             <trans lang="de_DE">Uhr Widget anzeigen</trans>
+        </token>
+        <token name="tr(widgetbanner)">
+            <trans lang="en_EN">Show series banner</trans>
+            <trans lang="de_DE">Serien Banner anzeigen</trans>
+        </token>
+        <token name="tr(widgetposter)">
+            <trans lang="en_EN">Show poster</trans>
+            <trans lang="de_DE">Poster anzeigen</trans>
         </token>
         <token name="tr(widgetsysinfo)">
             <trans lang="en_EN">Show sysinfo widget</trans>
