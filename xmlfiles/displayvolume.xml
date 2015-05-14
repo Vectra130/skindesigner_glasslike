@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE displayvolume SYSTEM "../../../dtd/displayvolume.dtd">
 
-<displayvolume x="0" y="0" width="100%" height="100%" fadetime="{volumeFadeTime}">
+<displayvolume x="0" y="0" width="100%" height="100%" fadetime="{volumeFadeTime}" shifttime="{volumeFadeTime}" shifttype="bottom" shiftmode="slowed">
 
     <background>
 	<area background="true" x="0" y="{areaheight}*0.83" width="{areawidth}" height="{areaheight}*0.17" layer="1">
-	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="skinpart" path="displayvolumeback" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="skinpart" path="bottomback" />
 	</area>
         <area background="true" x="{areawidth}*0.02" y="{areaheight}*0.95" width="{areawidth}*0.96" height="{areaheight}*0.008" layer="1">
             <drawellipse x="0" y="0" width="{areaheight}" height="{areaheight}" color="{clrProgressbarBg}" quadrant="0" />

@@ -247,6 +247,10 @@
         <trans lang="en_EN">Recording Length</trans>
         <trans lang="de_DE">Länge der Aufnahme</trans>
     </token>
+    <token name="tr(Reclengthepg)">
+        <trans lang="en_EN">Event Length (EPG)</trans>
+        <trans lang="de_DE">Länge der Sendung laut EPG</trans>
+    </token>
     <token name="tr(Programlength)">
         <trans lang="en_EN">Program Length</trans>
         <trans lang="de_DE">Länge der Sendung</trans>

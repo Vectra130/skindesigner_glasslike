@@ -21,8 +21,9 @@
 	<var type="int" name="mainmenuWidgetDisc">1</var>
 	<var type="int" name="mainmenuWidgetUps">1</var>
 
-	<var type="int" name="mainmenuWidgetShiftTime">1000</var>
+	<var type="int" name="mainmenuWidgetShiftTimers">500</var>
 	<var type="int" name="mainmenuWidgetDelayTimers">500</var>
+	<var type="int" name="mainmenuWidgetShiftInfo">500</var>
 	<var type="int" name="mainmenuWidgetDelayInfo">1000</var>
 
 	<var type="int" name="vectraSetup">1</var>
@@ -78,6 +79,10 @@
         <color name="clrFontChannelNextSubtitle">99777777</color>
         <color name="clrStatusIconActive">FFFFFFFF</color>
         <color name="clrStatusIconInactive">99555555</color>
+        <color name="clrFontTvguideBright">FFFFFFFF</color>
+        <color name="clrFontTvguideDark">AAAAAAAA</color>
+        <color name="clrFontTvguideGridBright">FFFFFFFF</color>
+        <color name="clrFontTvguideGridDark">AAAAAAAA</color>
     </colors>
 
 	&translations;

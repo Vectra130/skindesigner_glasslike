@@ -13,15 +13,13 @@
         <parameter type="int" name="mainmenuWidgetFadeime" min="0" max="3000" displaytext="{tr(widgetfadetime)}">0</parameter>
         <parameter type="bool" name="mainmenuTimerTypeIndicator" displaytext="{tr(timertypeindicator)}">1</parameter>
         <parameter type="bool" name="mainmenuRecBlink" displaytext="{tr(recblink)}">1</parameter>
-<!--
-        <parameter type="int" name="mainmenuWidgetTimerAnimType" min="1" max="2" displaytext="{tr(widgettimeranimtype)}">2</parameter>
--->
+        <parameter type="bool" name="mainmenuGlassEffect" displaytext="{tr(glasseffect)}">1</parameter>
     </submenu>
     <submenu name="DefaultMenu" displaytext="{tr(subdisplaymenudefault)}">
         <parameter type="int" name="defaultmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">20</parameter>
     </submenu>
     <submenu name="Channel" displaytext="{tr(subdisplaychannel)}">
-        <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
+        <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
         <parameter type="bool" name="channelWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
         <parameter type="bool" name="channelWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
         <parameter type="bool" name="channelWidgetBanner" displaytext="{tr(widgetbanner)}">1</parameter>
@@ -29,10 +27,13 @@
         <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
     <submenu name="Volume" displaytext="{tr(subdisplayvolume)}">
-        <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
+        <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">200</parameter>
     </submenu>
     <submenu name="Message" displaytext="{tr(subdisplaymessage)}">
         <parameter type="int" name="messageFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">300</parameter>
+    </submenu>
+    <submenu name="Audio" displaytext="{tr(subdisplayaudio)}">
+        <parameter type="int" name="audioFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
     </submenu>
     <submenu name="Schedules" displaytext="{tr(subdisplaymenuschedules)}">
         <parameter type="int" name="schedulesFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
@@ -157,6 +158,10 @@
             <trans lang="en_EN">Messages</trans>
             <trans lang="de_DE">Nachrichten</trans>
         </token>
+        <token name="tr(subdisplayaudio)">
+            <trans lang="en_EN">Audio</trans>
+            <trans lang="de_DE">Audio</trans>
+        </token>
         <token name="tr(subdisplaymenurecordings)">
             <trans lang="en_EN">Recordings</trans>
             <trans lang="de_DE">Aufnahmen</trans>
@@ -208,6 +213,10 @@
         <token name="tr(widgettimeranimtype)">
             <trans lang="en_EN">Timer animation type (1=fade / 2=shift)</trans>
             <trans lang="de_DE">Timer einblend Animation (1=FadeIn / 2=Schieben)</trans>
+        </token>
+        <token name="tr(glasseffect)">
+            <trans lang="en_EN">Glass effect</trans>
+            <trans lang="de_DE">Glas Effekt</trans>
         </token>
     </translations>
 </setup>

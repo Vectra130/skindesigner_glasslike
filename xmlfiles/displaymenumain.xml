@@ -29,10 +29,7 @@
 	</area>
     </header>
  
-<!--
-    <timers detached="true" delay="500" fadetime="{mainmenuWidgetFadeTime}">
--->
-    <timers detached="true" delay="{mainmenuWidgetDelayTimers}" shifttime="{mainmenuWidgetShiftTime}/2" startx="{areawidth}" starty="{areawidth}*0.01">
+    <timers detached="true" delay="{mainmenuWidgetDelayTimers}" shifttime="{mainmenuWidgetShiftTimers}" shifttype="right" shiftmode="slowed">
         <area background="true" x="{areawidth}*0.85" y="{areawidth}*0.01" width="{areawidth}*0.12" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
 	    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
 	    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
@@ -67,7 +64,7 @@
         </area>
     </timers>
     <!-- disc info -->
-    <discusage condition="{mainmenuWidgetDisc}" detached="true" delay="{mainmenuWidgetDelayInfo}" shifttime="{mainmenuWidgetShiftTime}" startx="{areawidth}*0.31" starty="{areaheight}">
+    <discusage condition="{mainmenuWidgetDisc}" detached="true" delay="{mainmenuWidgetDelayInfo}" shifttime="{mainmenuWidgetShiftInfo}" shifttype="bottom" shiftmode="slowed">
 	<area background="true" x="{areawidth}*0.31" y="{areaheight}*0.70" width="{areawidth}*0.08" height="{areawidth}*0.08" layer="1">
 	    <drawimage align="center" valign="center" imagetype="icon" path="ico_discusage" width="100%" height="100%" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="35%" color="{clrWidgetFontName}" text="{usedpercent}%" />
