@@ -411,4 +411,12 @@
             <trans lang="en_EN">No EPG Info</trans>
             <trans lang="de_DE">Keine EPG Infos</trans>
         </token>
+        <token name="tr(Recordedat)">
+            <trans lang="en_EN">Recorded at</trans>
+            <trans lang="de_DE">Aufgenommen am</trans>
+        </token>
+        <token name="tr(Playbackends)">
+            <trans lang="en_EN">Playback ends at</trans>
+            <trans lang="de_DE">Wiedergabe endet um</trans>
+        </token>
 </translations>

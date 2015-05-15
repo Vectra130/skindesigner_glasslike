@@ -37,9 +37,10 @@
         <color name="clrWhite">FFFFFFFF</color>
         <color name="clrTransWhite">99FFFFFF</color>
         <color name="clrBlack">FF000000</color>
+        <color name="clrOrange">FFFFCC33</color>	
+        <color name="clrGray">FF858585</color>
         <color name="clrBorder">FFABABAB</color>
         <color name="clrTransBorder">99ABABAB</color>
-        <color name="clrGray">FF858585</color>
         <color name="clrBackground">FF1A1A1A</color>
         <color name="clrTransBlack">99000000</color>
         <color name="clrTransBlackDark">DD000000</color>
@@ -75,6 +76,8 @@
         <color name="clrCuttedRec">FF0094FF</color>
         <color name="clrFontChannelTitle">FFFFFFFF</color>
         <color name="clrFontChannelSubtitle">99FFFFFF</color>
+        <color name="clrFontTitle">FFFFFFFF</color>
+        <color name="clrFontSubtitle">99FFFFFF</color>
         <color name="clrFontChannelNextTitle">FF777777</color>
         <color name="clrFontChannelNextSubtitle">99777777</color>
         <color name="clrStatusIconActive">FFFFFFFF</color>

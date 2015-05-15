@@ -26,6 +26,13 @@
         <parameter type="bool" name="channelWidgetPoster" displaytext="{tr(widgetposter)}">1</parameter>
         <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
+    <submenu name="Replay" displaytext="{tr(subdisplayreplay)}">
+        <parameter type="int" name="replayFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="bool" name="replayWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
+        <parameter type="bool" name="replayWidgetBanner" displaytext="{tr(widgetbanner)}">1</parameter>
+        <parameter type="bool" name="replayWidgetPoster" displaytext="{tr(widgetposter)}">1</parameter>
+        <parameter type="bool" name="replayRecBlink" displaytext="{tr(recblink)}">0</parameter>
+    </submenu>
     <submenu name="Volume" displaytext="{tr(subdisplayvolume)}">
         <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">200</parameter>
     </submenu>
@@ -57,10 +64,10 @@
     </submenu>
     <submenu name="Plugins" displaytext="{tr(subplugins)}">
     <submenu name="TvGuideNg" displaytext="{tr(subtvguide)}">
-        <parameter type="bool" name="tvguideChanNumber" displaytext="{tr(channumber)}">1</parameter>
         <parameter type="bool" name="tvguideGridLineHorizontal" displaytext="{tr(gridlinehorizontal)}">1</parameter>
         <parameter type="bool" name="tvguideGridLineVertical" displaytext="{tr(gridlinevertical)}">1</parameter>
-        <parameter type="int" name="tvguideGridFontSize" min="10" max="80" displaytext="{tr(gridfontsize)}">60</parameter>
+        <parameter type="int" name="tvguideGridFontSizeHor" min="10" max="80" displaytext="{tr(gridfontsize)}">60</parameter>
+        <parameter type="int" name="tvguideGridFontSizeVer" min="10" max="80" displaytext="{tr(gridfontsize)}">60</parameter>
         <parameter type="bool" name="tvguideRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
     </submenu>
@@ -145,6 +152,10 @@
         <token name="tr(subdisplaychannel)">
             <trans lang="en_EN">Channel switch</trans>
             <trans lang="de_DE">Kanalwechsel</trans>
+        </token>
+        <token name="tr(subdisplayreplay)">
+            <trans lang="en_EN">Replay</trans>
+            <trans lang="de_DE">Wiedergabe</trans>
         </token>
         <token name="tr(subdisplayvolume)">
             <trans lang="en_EN">Volume</trans>
