@@ -19,7 +19,7 @@
         <parameter type="int" name="defaultmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">20</parameter>
     </submenu>
     <submenu name="Channel" displaytext="{tr(subdisplaychannel)}">
-        <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="bool" name="channelWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
         <parameter type="bool" name="channelWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
         <parameter type="bool" name="channelWidgetBanner" displaytext="{tr(widgetbanner)}">1</parameter>
@@ -27,38 +27,38 @@
         <parameter type="bool" name="channelRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
     <submenu name="Replay" displaytext="{tr(subdisplayreplay)}">
-        <parameter type="int" name="replayFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="replayFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="bool" name="replayWidgetClock" displaytext="{tr(widgetclock)}">1</parameter>
         <parameter type="bool" name="replayWidgetBanner" displaytext="{tr(widgetbanner)}">1</parameter>
         <parameter type="bool" name="replayWidgetPoster" displaytext="{tr(widgetposter)}">1</parameter>
         <parameter type="bool" name="replayRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
     <submenu name="Volume" displaytext="{tr(subdisplayvolume)}">
-        <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">200</parameter>
+        <parameter type="int" name="volumeFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
     </submenu>
     <submenu name="Message" displaytext="{tr(subdisplaymessage)}">
-        <parameter type="int" name="messageFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">300</parameter>
+        <parameter type="int" name="messageFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
     </submenu>
     <submenu name="Audio" displaytext="{tr(subdisplayaudio)}">
-        <parameter type="int" name="audioFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="audioFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
     </submenu>
     <submenu name="Schedules" displaytext="{tr(subdisplaymenuschedules)}">
-        <parameter type="int" name="schedulesFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="schedulesFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="int" name="schedulesDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
         <parameter type="int" name="schedulesNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">12</parameter>
     </submenu>
     <submenu name="Timers" displaytext="{tr(subdisplaymenutimers)}">
-        <parameter type="int" name="timersFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="timersFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="int" name="timersDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
         <parameter type="int" name="timersNumMenuItems" min="6" max="12" displaytext="{tr(nummenuitems)}">7</parameter>
     </submenu>
     <submenu name="Recordings" displaytext="{tr(subdisplaymenurecordings)}">
-        <parameter type="int" name="recordingsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="recordingsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="int" name="recordingsDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">1000</parameter>
         <parameter type="int" name="recordingsNumMenuItems" min="6" max="12" displaytext="{tr(nummenuitems)}">8</parameter>
     </submenu>
     <submenu name="Channels" displaytext="{tr(subdisplaymenuchannels)}">
-        <parameter type="int" name="channelsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">500</parameter>
+        <parameter type="int" name="channelsFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="int" name="channelsDescriptionDelay" min="0" max="5000" displaytext="{tr(descriptiondelay)}">2000</parameter>
         <parameter type="int" name="channelsNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">12</parameter>
     </submenu>

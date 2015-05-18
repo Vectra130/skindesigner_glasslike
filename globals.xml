@@ -39,6 +39,7 @@
         <color name="clrBlack">FF000000</color>
         <color name="clrOrange">FFFFCC33</color>	
         <color name="clrGray">FF858585</color>
+        <color name="clrTransGray">99858585</color>
         <color name="clrBorder">FFABABAB</color>
         <color name="clrTransBorder">99ABABAB</color>
         <color name="clrBackground">FF1A1A1A</color>

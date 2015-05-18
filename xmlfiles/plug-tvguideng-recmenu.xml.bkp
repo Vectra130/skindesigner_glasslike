@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE 
 displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
 
-<displayplugin x="0" y="0" width="100%" height="100%" fadetime="{mainmenuFadeTime}" scaletvx="{areawidth}*0.01" scaletvy="{areaheight}*0.695" scaletvwidth="{areawidth}*0.29" scaletvheight="{areaheight}*0.3">
+<displayplugin x="0" y="0" width="100%" height="100%" fadetime="{menufadetime}" scaletvx="{areawidth}*0.0125" scaletvy="{areaheight}*0.70" scaletvwidth="{areawidth}*0.225" scaletvheight="{areaheight}*0.225">
     <!-- Available Variables Background:
     {menuwidth} menuwidth in percent of screenwidth
     {menuheight} menuheight in percent of screenheight
     {hasscrollbar}  true if menu needs a scrollbar
     -->
     <viewelement name="background">
-	<area x="{areawidth}/2 - {menuwidth}*{areawidth}/100/2 - 20" y="{areaheight}/2 - {menuheight}*{areaheight}/100/2 - 20" width="{menuwidth}*{areawidth}/100 + 40" height="{menuheight}*{areaheight}/100 + 40" layer="4">
+	<area x="{areawidth}/2 - {menuwidth}*{areawidth}/100/2 - 20" y="{areaheight}/2 - {menuheight}*{areaheight}/100/2 - 20" width="{menuwidth}*{areawidth}/100 + 40" height="{menuheight}*{areaheight}/100 + 40" layer="5">
 	    <fill color="{clrProgressbar}" />
 	    <drawimage imagetype="skinpart" path="plug_tvguide/popup_bg" x="5" y="5" width="{areawidth} - 10" height="{areaheight} - 10" />
 	    <drawellipse x="5" y="5" width="30" height="30" quadrant="-2" color="{clrProgressbar}" />
@@ -30,12 +30,12 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
     {offset}        offset in tenth of a percent
     -->
     <viewelement name="scrollbar">
-	<area x="{areawidth} - {menuwidth}*{areawidth}/150 - {areawidth}*0.015" y="{areaheight}/2 - {menuheight}*{areaheight}/150/2" width="{areawidth}*0.01" height="{menuheight}*{areaheight}/150" layer="6">
+	<area x="{areawidth} - {menuwidth}*{areawidth}/150 - {areawidth}*0.015" y="{areaheight}/2 - {menuheight}*{areaheight}/150/2" width="{areawidth}*0.01" height="{menuheight}*{areaheight}/150" layer="5">
             <drawrectangle x="0" y="{areawidth}/2" width="{areawidth}" height="{areaheight} - {areawidth}" color="{clrBorder}" />
             <drawrectangle x="1" y="{areawidth}/2" width="{areawidth} - 2" height="{areaheight} - {areawidth}" color="{clrBlack}" />
             <drawrectangle x="1" y="{areaheight} * {offset} / 1000" width="{areawidth} - 2" height="{areaheight} * {height} / 1000" color="{clrProgressbar}" />
 	</area>
-	<area x="{areawidth} - {menuwidth}*{areawidth}/150 - {areawidth}*0.015" y="{areaheight}/2 - {menuheight}*{areaheight}/150/2" width="{areawidth}*0.01" height="{menuheight}*{areaheight}/150" layer="6">
+	<area x="{areawidth} - {menuwidth}*{areawidth}/150 - {areawidth}*0.015" y="{areaheight}/2 - {menuheight}*{areaheight}/150/2" width="{areawidth}*0.01" height="{menuheight}*{areaheight}/150" layer="5">
 	    <drawimage imagetype="skinpart" path="verticalbartop" x="1" y="{areaheight} * {offset} / 1000" width="{areawidth} - 2" height="{areaheight} * {height} / 1000" />
 	    <drawellipse x="1" y="{areaheight} * {offset} / 1000" width="{areawidth}/2" height="{areawidth}/2" quadrant="-2" color="{clrBlack}" />
 	    <drawellipse x="{areawidth}/2 - 1" y="{areaheight} * {offset} / 1000" width="{areawidth}/2" height="{areawidth}/2" quadrant="-1" color="{clrBlack}" />
@@ -56,10 +56,10 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         <!-- Background 
         {current}       true if item is currently selected
         -->
-        <area condition="not{info}++not{buttonyesno}++not{timerconflictheader}++not{timerconflict}++not{timelineheader}++not{timelinetimer}" layer="4">
+        <area condition="not{info}++not{buttonyesno}++not{timerconflictheader}++not{timerconflict}++not{timelineheader}++not{timelinetimer}" layer="5">
             <drawimage condition="{current}" imagetype="skinpart" path="menubuttonactive" x="0" y="0" width="100%" height="100%"/>
         </area>
-        <area condition="{info}" layer="4">
+        <area condition="{info}" layer="5">
             <drawtext condition="eq({lines}, 1)" align="center" valign="center" font="{regular}" fontsize="50%" color="{clrWhite}" text="{line1}" />
 
             <drawtext condition="eq({lines}, 2)" align="center" y="5%" font="{regular}" fontsize="30%" color="{clrWhite}" text="{line1}" />
@@ -78,7 +78,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {button}        true
         {buttontext}    text to display on button
         -->
-        <area condition="{button}" layer="5">
+        <area condition="{button}" layer="6">
             <drawtext condition="not{current}" align="center" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{buttontext}" />
             <drawtext condition="{current}" align="center" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{buttontext}" />
         </area>
@@ -93,11 +93,11 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawimage imagetype="skinpart" path="plug_tvguide/button" x="2%" y="5%" width="46%" height="90%"/>
             <drawimage imagetype="skinpart" path="plug_tvguide/button" x="52%" y="5%" width="46%" height="90%"/>
         </area>
-        <area condition="{buttonyesno}" layer="4">
-            <drawimage condition="{current}++{yes}" imagetype="skinpart" path="plug_tvguide/button_active" x="2%" y="5%" width="46%" height="90%"/>
-            <drawimage condition="{current}++not{yes}" imagetype="skinpart" path="plug_tvguide/button_active" x="52%" y="5%" width="46%" height="90%"/>
-        </area>
         <area condition="{buttonyesno}" layer="5">
+            <drawimage condition="{current}++{yes}" imagetype="skinpart" path="menubuttonactive" x="2%" y="5%" width="46%" height="90%"/>
+            <drawimage condition="{current}++not{yes}" imagetype="skinpart" path="menubuttonactive" x="52%" y="5%" width="46%" height="90%"/>
+        </area>
+        <area condition="{buttonyesno}" layer="6">
             <drawtext condition="not{current}" name="yestext" x="{areawidth}/4 - {width(yestext)}/2" valign="center" font="{regular}" fontsize="60%" color="{clrFontMenuItem}" text="{textyes}" />
             <drawtext condition="not{current}" name="notext" x="3*{areawidth}/4 - {width(notext)}/2" valign="center" font="{regular}" fontsize="60%" color="{clrFontMenuItem}" text="{textno}" />
             <drawtext condition="{current}++{yes}" name="yestext" x="{areawidth}/4 - {width(yestext)}/2" valign="center" font="{regular}" fontsize="60%" color="{clrFontMenuItemSelected}" text="{textyes}" />
@@ -110,7 +110,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, integer
         -->
-        <area condition="{intselector}" layer="5">
+        <area condition="{intselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawtext condition="not{current}" align="right" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{value} " />
@@ -121,7 +121,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, true or false
         -->
-        <area condition="{boolselector}" layer="5">
+        <area condition="{boolselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawimage condition="{value}" imagetype="icon" path="ico_on_short" x="{areawidth} - {areaheight}*0.4" y="30%" width="{areaheight}*0.4" height="{areaheight}*0.4"/>
@@ -132,7 +132,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, string
         -->
-        <area condition="{stringselector}" layer="5">
+        <area condition="{stringselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawimage imagetype="icon" path="ico_arrow_right" x="{areawidth} - {areaheight}*0.4" y="30%" width="{areaheight}*0.4" height="{areaheight}*0.4"/>
@@ -146,13 +146,13 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, string
         -->
-        <area condition="{textinput}" layer="5">
+        <area condition="{textinput}" layer="6">
             <drawtext condition="not{current}" x="1%" y="0%" font="{regular}" fontsize="30%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" y="0%" font="{regular}" fontsize="30%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawrectangle condition="not{editmode}" x="1%" y="35%" width="98%" height="30%" color="{clrTransBlack}"/>
             <drawrectangle condition="{editmode}" x="1%" y="35%" width="98%" height="30%" color="{clrRed}"/>
         </area>
-        <area condition="{textinput}" layer="6">
+        <area condition="{textinput}" layer="7">
             <drawtext align="right" y="35%" font="{regular}" fontsize="30%" color="{clrWhite}" text="{value}   " />
         </area>
         <!-- Time Selector 
@@ -160,7 +160,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, hh:mm
         -->
-        <area condition="{timeselector}" layer="5">
+        <area condition="{timeselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawtext condition="not{current}" align="right" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{value} " />
@@ -171,7 +171,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}          title of selector
         {value}         current value of selector, dd.mm
         -->
-        <area condition="{dayselector}" layer="5">
+        <area condition="{dayselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawtext condition="not{current}" align="right" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{value} " />
@@ -185,7 +185,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {channelid}          id of channel
         {channellogoexisis}  true if channel logo exists
         -->
-        <area condition="{channelselector}" layer="5">
+        <area condition="{channelselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawimage condition="{channellogoexisis}" imagetype="channellogo" path="{channelid}" x="{areawidth}-{areaheight}" valign="center" width="{areaheight}*0.9" height="{areaheight}*0.9" />
@@ -200,7 +200,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {day0abbr} ... {day6abbr}  localized one character abbrevation for weekdays from Monday to Sunday
         {day0set}  ... {day6set}   true if according weekday from Monday to Sunday is set
         -->
-        <area condition="{weekdayselector}" layer="5">
+        <area condition="{weekdayselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             
@@ -227,7 +227,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawrectangle condition="not{day6set}" x="{areawidth} - {areaheight}*1.0 + 2" y="{areaheight}*0.25+2" width="{areaheight}*0.5-4" height="{areaheight}*0.5-4" color="{clrGray}" />
             <drawrectangle condition="{day6set}" x="{areawidth} - {areaheight}*1.0 + 2" y="{areaheight}*0.25+2" width="{areaheight}*0.5-4" height="{areaheight}*0.5-4" color="{clrBlack}" />
         </area>
-        <area condition="{weekdayselector}" layer="6">
+        <area condition="{weekdayselector}" layer="7">
             <drawrectangle condition="{current}++eq({dayselected}, 0)" x="{areawidth} - {areaheight}*4.0 + 2" y="{areaheight}*0.25+2" width="{areaheight}*0.5-4" height="{areaheight}*0.5-4" color="{clrTransRed}" />
             <drawrectangle condition="{current}++eq({dayselected}, 1)" x="{areawidth} - {areaheight}*3.5 + 2" y="{areaheight}*0.25+2" width="{areaheight}*0.5-4" height="{areaheight}*0.5-4" color="{clrTransRed}" />
             <drawrectangle condition="{current}++eq({dayselected}, 2)" x="{areawidth} - {areaheight}*3.0 + 2" y="{areaheight}*0.25+2" width="{areaheight}*0.5-4" height="{areaheight}*0.5-4" color="{clrTransRed}" />
@@ -249,7 +249,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {text}               title of selector
         {folder}             current folder of selector, string
         -->
-        <area condition="{directoryselector}" layer="5">
+        <area condition="{directoryselector}" layer="6">
             <drawtext condition="not{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItem}" text="{text}" />
             <drawtext condition="{current}" x="1%" valign="center" font="{regular}" fontsize="70%" color="{clrFontMenuItemSelected}" text="{text}" />
             <drawimage imagetype="icon" path="ico_arrow_right" x="{areawidth} - {areaheight}*0.8" y="10%" width="{areaheight}*0.8" height="{areaheight}*0.8"/>
@@ -266,11 +266,11 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {overlapstartpercent}    start of overlap in percent of total conflict time width
         {overlapwidthpercent}    width of overlap in percent of total conflict time width
         -->
-        <area condition="{timerconflictheader}" layer="4">
+        <area condition="{timerconflictheader}" layer="5">
             <drawtext name="title" x="{areawidth}*0.7*0.5 - {width(title)}/2" valign="center" font="{regular}" fontsize="70%" color="{clrWhite}" text="{text}" />
             <drawrectangle x="70%" y="0" width="30%" height="100%" color="{clrWhite}"/>
         </area>
-        <area condition="{timerconflictheader}" layer="5">
+        <area condition="{timerconflictheader}" layer="6">
             <drawtext x="{areawidth}*0.7" y="0" font="{regular}" fontsize="40%" color="{clrBlack}" text="{conflictstart}" />
             <drawtext align="right" y="0" font="{regular}" fontsize="40%" color="{clrBlack}" text="{conflictstop}" />
             <drawtext name="olstart" x="{areawidth}*0.7 + {overlapstartpercent}*{areawidth}*0.3/100 - 70" y="40%" font="{regular}" fontsize="50%" color="{clrRed}" text="{overlapstart}" />
@@ -296,11 +296,11 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {overlapstartpercent}    start of overlap in percent of total conflict time width
         {overlapwidthpercent}    width of overlap in percent of total conflict time width
         -->
-        <area condition="{timerconflict}" layer="4">
+        <area condition="{timerconflict}" layer="5">
             <drawimage condition="not{current}" imagetype="skinpart" path="plug_tvguide/button" x="0" y="0" width="70%" height="100%"/>
             <drawimage condition="{current}" imagetype="skinpart" path="plug_tvguide/button_active" x="0" y="0" width="70%" height="100%"/>
         </area>
-        <area condition="{timerconflict}" layer="5">
+        <area condition="{timerconflict}" layer="6">
             <drawimage condition="{current}++{infoactive}" imagetype="icon" path="ico_info_active" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="not{current}||not{infoactive}" imagetype="icon" path="ico_info_inactive" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="{current}++{deleteactive}" imagetype="icon" path="ico_delete_active" x="{areaheight}*0.6" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
@@ -315,7 +315,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawrectangle x="70%" y="0" width="30%" height="100%" color="{clrWhite}"/>
             <drawrectangle x="{areawidth}*0.7 + {timerstartpercent}*{areawidth}*0.3/100" y="30%" width="{timerwidthpercent}*{areawidth}*0.3/100" height="40%" color="{clrBlack}"/>
         </area>
-        <area condition="{timerconflict}" layer="6">
+        <area condition="{timerconflict}" layer="7">
             <drawrectangle x="{areawidth}*0.7 + {overlapstartpercent}*{areawidth}*0.3/100" y="0" width="{overlapwidthpercent}*{areawidth}*0.3/100" height="100%" color="{clrTransRed}"/>
         </area>
         <!-- Event 
@@ -335,7 +335,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         <area condition="{event}" layer="4">
 	    <drawimage imagetype="skinpart" path="bannerback" x="0" y="0" width="100%" height="100%" />
 	</area>
-        <area condition="{event}" layer="5">
+        <area condition="{event}" layer="6">
             <drawimage condition="{current}" imagetype="icon" path="ico_info_active" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="not{current}" imagetype="icon" path="ico_info_inactive" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="{channellogoexisis}" imagetype="channellogo" path="{channelid}" x="{areaheight}*0.8" valign="center" width="{areaheight}*0.8" height="{areaheight}*0.8" />
@@ -360,7 +360,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {channelid}              id of channel
         {channellogoexisis}      true if channel logo exists
         -->
-        <area condition="{recording}" layer="5">
+        <area condition="{recording}" layer="6">
             <drawtext condition="not{current}" x="1%" y="0" font="{regular}" width="98%" fontsize="40%" color="{clrFontMenuItem}" text="{recname}" />
             <drawtext condition="not{current}" x="55%" y="0" font="{regular}" width="98%" fontsize="25%" color="{clrFontMenuItem}" text="{recdate} {recstarttime} - {recduration} min, {channelname}" />
             <drawtext condition="{current}" x="1%" y="0" font="{regular}" width="98%" fontsize="40%" color="{clrFontMenuItemSelected}" text="{recname}" />
@@ -376,7 +376,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {editactive}             true if edit icon is active
         {deleteactive}           true if delete icon is active
         -->
-        <area condition="{searchtimer}" layer="5">
+        <area condition="{searchtimer}" layer="6">
             <drawimage condition="{current}++{searchactive}" imagetype="icon" path="ico_search_active" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="not{current}||not{searchactive}" imagetype="icon" path="ico_search_inactive" x="{areaheight}*0.05" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="{current}++{editactive}" imagetype="icon" path="ico_edit_active" x="{areaheight}*0.6" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
@@ -387,7 +387,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawtext condition="{current}" x="{areaheight}*1.8" width="{areawidth} - {areaheight}*2" y="5%" font="{regular}" fontsize="55%" color="{clrFontMenuItemSelected}" text="{searchstring}" />
             <drawimage condition="{timeractive}" imagetype="icon" path="ico_timer_active" x="{areawidth} - {areaheight}*0.5" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="not{timeractive}" imagetype="icon" path="ico_timer_inactive" x="{areawidth}-{areaheight}*0.05*3" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
-            <drawtext x="{areaheight}*1.8" y="55%" font="{regular}" fontsize="45%" color="{clrWhite}" text="{tr(Active)} {tr(Timers)}: {activetimers}, {tr(Recordings)}: {recordingsdone}" />
+            <drawtext x="{areaheight}*1.8" y="55%" font="{regular}" fontsize="45%" color="{clrWhite}" text="{tr(Active)} {tr(timer)}: {activetimers}, {tr(recordings)}: {recordingsdone}" />
         </area>
         <!-- Timeline Header 
         {timelineheader}            true
@@ -405,7 +405,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {eventstart}                start time of according event
         {eventstop}                 end time of according event
         -->
-        <area condition="{timelineheader}" layer="4">
+        <area condition="{timelineheader}" layer="5">
             <drawtext align="center" y="1%" font="{regular}" fontsize="25%" color="{clrWhite}" text="Timer {tr(for)} {date}" />
             <drawrectangle x="{areawidth}*0.05" y="80%" width="{areawidth}*0.0375" height="20%" color="{clrBlack}"/>
             <drawrectangle x="{areawidth}*0.0875" y="80%" width="{areawidth}*0.0375" height="20%" color="{clrWhite}"/>
@@ -432,7 +432,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawrectangle x="{areawidth}*0.875" y="80%" width="{areawidth}*0.0375" height="20%" color="{clrBlack}"/>
             <drawrectangle x="{areawidth}*0.9125" y="80%" width="{areawidth}*0.0375" height="20%" color="{clrWhite}"/>
         </area>
-        <area condition="{timelineheader}" layer="5">
+        <area condition="{timelineheader}" layer="6">
             <drawtext name="text0" x="{areawidth}*0.05 + {areawidth}*0.0375/2 - {width(text0)}/2" y="80%" font="{regular}" fontsize="20%" color="{clrWhite}" text="0"/>
             <drawtext name="text1" x="{areawidth}*0.0875 + {areawidth}*0.0375/2 - {width(text1)}/2" y="80%" font="{regular}" fontsize="20%" color="{clrBlack}" text="1"/>
             <drawtext name="text2" x="{areawidth}*0.125 + {areawidth}*0.0375/2 - {width(text2)}/2" y="80%" font="{regular}" fontsize="20%" color="{clrWhite}" text="2"/>
@@ -458,7 +458,7 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
             <drawtext name="text22" x="{areawidth}*0.875 + {areawidth}*0.0375/2 - {width(text22)}/2" y="80%" font="{regular}" fontsize="20%" color="{clrWhite}" text="22"/>
             <drawtext name="text23" x="{areawidth}*0.9125 + {areawidth}*0.0375/2 - {width(text23)}/2" y="80%" font="{regular}" fontsize="20%" color="{clrBlack}" text="23"/>
         </area>
-        <area condition="{timelineheader}++{timerset}" layer="5">
+        <area condition="{timelineheader}++{timerset}" layer="6">
              <drawimage condition="{channellogoexisis}" imagetype="channellogo" path="{channelid}" x="1%" y="30%" width="{areaheight}*0.5" height="{areaheight}*0.5" />
              <drawtext condition="not{channellogoexisis}" x="1%" width="{areaheight}*0.7" y="40%" font="{regular}" fontsize="10%" color="{clrWhite}" text="{channelname}"/>
              <drawtext x="{areaheight}*0.8" y="36%" font="{regular}" fontsize="15%" color="{clrWhite}" text="{eventstart} - {eventstop} (Rec. {timerstart} - {timerstop}), Transp. {channeltransponder}"/>
@@ -469,19 +469,19 @@ displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
         {timerstart}                start of timer in tenth percent of complete 24h width
         {timerwidth}                width of timer in tenth percent of complete 24h width
         -->
-        <area condition="{timelinetimer}" layer="4">
+        <area condition="{timelinetimer}" layer="5">
             <drawrectangle condition="{current}" x="5%" y="0" width="90%" height="100%" color="{clrBorder}"/>
             <drawrectangle condition="not{current}" x="5%" y="0" width="90%" height="100%" color="{clrGray}"/>
             <drawrectangle x="5%" y="{areaheight}-1" width="90%" height="1" color="{clrBlack}"/>
         </area>
-        <area condition="{timelinetimer}" layer="5">
+        <area condition="{timelinetimer}" layer="6">
             <drawrectangle x="{areawidth}*0.05 + {timerstart}*{areawidth}*0.9/1000" y="25%" width="{timerwidth}*{areawidth}*0.9/1000" height="50%" color="{clrBlack}"/>
         </area>
         <!-- Favorites 
         {favorite}                  true
         {favdesc}                   description of favorite
         -->
-        <area condition="{favorite}" layer="5">
+        <area condition="{favorite}" layer="6">
             <drawimage condition="{current}" imagetype="icon" path="ico_search_active" x="{areaheight}*0.1" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawimage condition="not{current}" imagetype="icon" path="ico_search_inactive" x="{areaheight}*0.1" valign="center" width="{areaheight}*0.5" height="{areaheight}*0.5"/>
             <drawtext condition="not{current}" x="{areaheight}" valign="center" font="{regular}" width="{areawidth} - {areaheight}" fontsize="70%" color="{clrFontMenuItem}" text="{favdesc}" />

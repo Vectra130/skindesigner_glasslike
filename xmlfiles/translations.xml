@@ -291,13 +291,21 @@
             <trans lang="en_EN">maximum today</trans>
             <trans lang="de_DE">heutiges Maximum</trans>
         </token>
-        <token name="tr(Rrecipitationprobability)">
+        <token name="tr(Precipitationprobability)">
             <trans lang="en_EN">Precipitation Prob.</trans>
-            <trans lang="de_DE">Regenwahrsch.</trans>
+            <trans lang="de_DE">Regenwahrscheinlichkeit</trans>
         </token>
         <token name="tr(Precipitationintensity)">
             <trans lang="en_EN">Precipitation Intensity</trans>
             <trans lang="de_DE">Regenmenge</trans>
+        </token>
+        <token name="tr(Precipitationtype)">
+            <trans lang="en_EN">Precipitation Type</trans>
+            <trans lang="de_DE">Niederschlagsart</trans>
+        </token>
+        <token name="tr(Noprecipitation)">
+            <trans lang="en_EN">No precipitation</trans>
+            <trans lang="de_DE">Kein Niederschlag</trans>
         </token>
         <token name="tr(Humidity)">
             <trans lang="en_EN">Humidity</trans>
@@ -330,6 +338,14 @@
         <token name="tr(Conditions)">
             <trans lang="en_EN">Weather Conditions</trans>
             <trans lang="de_DE">Wetterlage</trans>
+        </token>
+        <token name="tr(Weatherforecast)">
+            <trans lang="en_EN">Weatherforecast</trans>
+            <trans lang="de_DE">Wettervorhersage</trans>
+        </token>
+        <token name="tr(Timestamp)">
+            <trans lang="en_EN">Timestamp</trans>
+            <trans lang="de_DE">Aktualisiert</trans>
         </token>
         <token name="tr(from)">
             <trans lang="en_EN">from</trans>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE displayplugin SYSTEM "../../../dtd/displayplugin.dtd">
 
-<displayplugin x="0" y="0" width="100%" height="100%" fadetime="0" scaletvx="{areawidth}*0.01" scaletvy="{areaheight}*0.695" scaletvwidth="{areawidth}*0.29" scaletvheight="{areaheight}*0.3" >
+<displayplugin x="0" y="0" width="100%" height="100%" fadetime="{mainmenuFadeTime}" scaletvx="{areawidth}*0.01" scaletvy="{areaheight}*0.695" scaletvwidth="{areawidth}*0.29" scaletvheight="{areaheight}*0.3" >
 
     <viewelement name="background_hor">
 	<!-- main window -->
@@ -72,14 +72,14 @@
             <drawellipse x="0" y="{areaheight} - 15" width="15" height="15" quadrant="-3" color="{clrTransparent}" />
         </area>
 	<!-- vdr logo -->
-	<area background="true" x="{areawidth}*0.903" y="{areaheight}*0.70 - {areawidth}*0.02" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="1">
+	<area background="true" x="{areawidth}*0.903" y="{areaheight}*0.70 - {areawidth}*0.02" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="2">
 	    <drawimage imagetype="icon" path="ico_vdrlogo" x="0" y="0" width="90%" height="{areaheight}"/>
         </area>
 	<area background="true" x="{areawidth}*0.90" y="{areaheight}*0.70" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="2">
 	    <drawimage imagetype="icon" path="ico_glasslike" x="0" valign="bottom" width="100%" height="{areaheight}"/>
 	</area>
 	<!-- fake scrollbar -->
-        <area background="true" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2" width="{areawidth}*0.01 - 6" height="{areaheight} - {areawidth}*0.02 - 6" layer="2">
+        <area background="true" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2" width="{areawidth}*0.01 - 6" height="{areaheight} - {areawidth}*0.02 - 6" layer="3">
 	    <drawellipse name="scroll_top" x="0" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="2" color="{clrProgressbar}" />
 	    <drawellipse x="0" y="0" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="2" color="{clrProgressbarBg}" />
 	    <drawellipse x="{areawidth}/2" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="1" color="{clrProgressbar}" />
@@ -92,7 +92,7 @@
             <drawrectangle x="{areawidth} - 2" y="{height(scroll_top)}" width="2" height="{posy(scroll_bottom)} - {width(scroll_top)}" color="{clrProgressbar}" />
         </area>
 	<!-- timeline -->
-	<area background="true" x="{areawidth}*0.08" y="{areawidth}*0.01 + {areaheight}*0.03 - 3" width="{areawidth}*0.89 - 2" height="3" layer="2">
+	<area background="true" x="{areawidth}*0.08" y="{areawidth}*0.01 + {areaheight}*0.03 - 3" width="{areawidth}*0.89 - 2" height="3" layer="3">
             <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="0" width="100%" height="100%"/>
 	</area>
     </viewelement>
@@ -126,7 +126,7 @@
             <drawrectangle x="{areawidth} - 2" y="{areawidth}/2" width="2" height="{areaheight} - {areawidth}" color="{clrBorder}" />
 	</area>
         <!-- clock -->
-        <area background="true" x="{areawidth}*0.935 - {areaheight}*0.05" y="78%" width="{areaheight}*0.10" height="{areaheight}*0.10" layer="2">
+        <area background="true" x="{areawidth}*0.935 - {areaheight}*0.05" y="78%" width="{areaheight}*0.10" height="{areaheight}*0.10" layer="3">
             <drawimage imagetype="skinpart" path="menuclockback" x="0" y="0" width="100%" height="100%"/>
 	</area>
         <!-- tv frame -->
@@ -166,14 +166,14 @@
             <drawellipse x="0" y="{areaheight} - 15" width="15" height="15" quadrant="-3" color="{clrTransparent}" />
         </area>
 	<!-- vdr logo -->
-	<area background="true" x="{areawidth}*0.903" y="{areaheight}*0.70 - {areawidth}*0.02" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="1">
+	<area background="true" x="{areawidth}*0.903" y="{areaheight}*0.70 - {areawidth}*0.02" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="2">
 	    <drawimage imagetype="icon" path="ico_vdrlogo" x="0" y="0" width="90%" height="{areaheight}"/>
         </area>
 	<area background="true" x="{areawidth}*0.90" y="{areaheight}*0.70" width="{areawidth}*0.07" height="{areaheight}*0.10" layer="2">
 	    <drawimage imagetype="icon" path="ico_glasslike" x="0" valign="bottom" width="100%" height="{areaheight}"/>
 	</area>
 	<!-- fake scrollbar -->
-        <area background="true" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2" width="{areawidth}*0.01 - 6" height="{areaheight} - {areawidth}*0.02 - 6" layer="2">
+        <area background="true" x="{areawidth}*0.99 - {areawidth}*0.01 + 2" y="{areawidth}*0.01 + 2" width="{areawidth}*0.01 - 6" height="{areaheight} - {areawidth}*0.02 - 6" layer="3">
 	    <drawellipse name="scroll_top" x="0" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="2" color="{clrProgressbar}" />
 	    <drawellipse x="0" y="0" width="{areawidth}/2 - 1" height="{areawidth}/2 - 2" quadrant="2" color="{clrProgressbarBg}" />
 	    <drawellipse x="{areawidth}/2" y="0" width="{areawidth}/2" height="{areawidth}/2" quadrant="1" color="{clrProgressbar}" />
@@ -186,7 +186,7 @@
             <drawrectangle x="{areawidth} - 2" y="{height(scroll_top)}" width="2" height="{posy(scroll_bottom)} - {width(scroll_top)}" color="{clrProgressbar}" />
         </area>
 	<!-- timeline -->
-	<area background="true" x="{areawidth}*0.0275 -3" y="{areawidth}*0.01 + {areaheight}*0.05" width="3" height="{areaheight}*0.65 - {areawidth}*0.02 - 2" layer="2">
+	<area background="true" x="{areawidth}*0.0275 -3" y="{areawidth}*0.01 + {areaheight}*0.05" width="3" height="{areaheight}*0.65 - {areawidth}*0.02 - 2" layer="3">
             <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="0" width="100%" height="100%"/>
 	</area>
     </viewelement>
@@ -219,7 +219,7 @@
     -->
 
     <viewelement name="header_hor">
-        <area condition="not{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.775" width="{areawidth}*0.47 - 2" height="{areaheight}*0.07" layer="3">
+        <area condition="not{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.775" width="{areawidth}*0.47 - 2" height="{areaheight}*0.07" layer="2">
             <drawtext align="center" y="0" font="{regular}" width="100%" fontsize="70%" color="{clrFontTvguideBright}" text="{title}" />
             <drawtext align="center" y="60%" font="{regular}" width="100%" fontsize="40%" color="{clrFontTvguideDark}" text="{shorttext}" />
 	    <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="100%" height="3"/>
@@ -229,7 +229,7 @@
             <drawtext align="center" y="50%" font="{regular}" width="100%" fontsize="55%" color="{clrFontTvguideBright}" text="{start} - {stop}" />
 	</area>
 	<!-- poster -->
-        <area condition="not{isdummy}++{hasposter}" x="{areawidth}*0.31" y="{areaheight} - {areawidth}*0.01 - {areawidth}*0.08*{posterheight}/{posterwidth}" width="{areawidth}*0.08" height="{areawidth}*0.08*{posterheight}/{posterwidth}" layer="3">
+        <area condition="not{isdummy}++{hasposter}" x="{areawidth}*0.31" y="{areaheight} - {areawidth}*0.01 - {areawidth}*0.08*{posterheight}/{posterwidth}" width="{areawidth}*0.08" height="{areawidth}*0.08*{posterheight}/{posterwidth}" layer="2">
 	    <drawrectangle x="{posx(poster_window)}" y="{posy(poster_window)}" width="{width(poster_window)} + 2" height="{height(poster_window)} + 2" color="{clrBorder}" />
 	    <drawrectangle name="poster_window" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
             <drawimage imagetype="image" path="{posterpath}" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2"/>
@@ -241,30 +241,30 @@
             <drawellipse x="{areawidth} - 17" y="{areaheight} - 17" width="15" height="15" quadrant="-4" color="{clrBorder}" />
             <drawellipse x="{areawidth} - 15" y="{areaheight} - 15" width="15" height="15" quadrant="-4" color="{clrBlack}" />
 	</area>
-        <area condition="{isdummy}||not{hasposter}" x="{areawidth}*0.31" y="{areaheight}*0.825" width="{areawidth}*0.08" height="{areaheight}*0.06" layer="3">
+        <area condition="{isdummy}||not{hasposter}" x="{areawidth}*0.31" y="{areaheight}*0.825" width="{areawidth}*0.08" height="{areaheight}*0.06" layer="2">
             <drawimage imagetype="channellogo" path="{channelid}" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
 	</area>
-        <areascroll condition="not{isdummy}" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="slow" x="{areawidth}*0.41" y="{areaheight}*0.845" width="{areawidth}*0.47 - 2" height="{areaheight}*0.155 - {areawidth}*0.01 - 2" layer="3">
+        <areascroll condition="not{isdummy}" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="slow" x="{areawidth}*0.41" y="{areaheight}*0.845" width="{areawidth}*0.47 - 2" height="{areaheight}*0.155 - {areawidth}*0.01 - 2" layer="2">
             <drawtextbox x="0" y="0" width="100%" font="{regular}" fontsize="20%" color="{clrFontTvguideBright}" text="{description}" />
         </areascroll>
-        <area condition="{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.785" width="{areawidth}*0.47 - 2" height="{areaheight}*0.205 - {areawidth}*0.01 - 2" layer="3">
+        <area condition="{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.785" width="{areawidth}*0.47 - 2" height="{areaheight}*0.205 - {areawidth}*0.01 - 2" layer="2">
             <drawtext x="0" y="23%" font="{regular}" width="100%" fontsize="75%" color="{clrFontTvguideBright}" text="{title}" />
 	    <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="100%" height="3"/>
         </area>
     </viewelement>
 
     <viewelement name="header_ver">
-        <area condition="not{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.775" width="{areawidth}*0.47 - 2" height="{areaheight}*0.07" layer="3">
+        <area condition="not{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.775" width="{areawidth}*0.47 - 2" height="{areaheight}*0.07" layer="2">
             <drawtext align="center" y="0" font="{regular}" width="100%" fontsize="70%" color="{clrFontTvguideBright}" text="{title}" />
             <drawtext align="center" y="60%" font="{regular}" width="100%" fontsize="40%" color="{clrFontTvguideDark}" text="{shorttext}" />
 	    <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="100%" height="3"/>
 	</area>
-        <area condition="not{isdummy}" x="{areawidth}*0.305" y="{areaheight}*0.70" width="{areawidth}*0.09" height="{areaheight}*0.05" layer="3">
+        <area condition="not{isdummy}" x="{areawidth}*0.305" y="{areaheight}*0.70" width="{areawidth}*0.09" height="{areaheight}*0.05" layer="2">
             <drawtext align="center" y="0" font="{regular}" width="100%" fontsize="55%" color="{clrFontTvguideBright}" text="{day} {printf('%02d.%02d', daynumeric, month)}.{year}" />
             <drawtext align="center" y="50%" font="{regular}" width="100%" fontsize="55%" color="{clrFontTvguideBright}" text="{start} - {stop}" />
 	</area>
 	<!-- poster -->
-        <area condition="not{isdummy}++{hasposter}" x="{areawidth}*0.31" y="{areaheight} - {areawidth}*0.01 - {areawidth}*0.08*{posterheight}/{posterwidth}" width="{areawidth}*0.08" height="{areawidth}*0.08*{posterheight}/{posterwidth}" layer="3">
+        <area condition="not{isdummy}++{hasposter}" x="{areawidth}*0.31" y="{areaheight} - {areawidth}*0.01 - {areawidth}*0.08*{posterheight}/{posterwidth}" width="{areawidth}*0.08" height="{areawidth}*0.08*{posterheight}/{posterwidth}" layer="2">
 	    <drawrectangle x="{posx(poster_window)}" y="{posy(poster_window)}" width="{width(poster_window)} + 2" height="{height(poster_window)} + 2" color="{clrBorder}" />
 	    <drawrectangle name="poster_window" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
             <drawimage imagetype="image" path="{posterpath}" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2"/>
@@ -276,13 +276,13 @@
             <drawellipse x="{areawidth} - 17" y="{areaheight} - 17" width="15" height="15" quadrant="-4" color="{clrBorder}" />
             <drawellipse x="{areawidth} - 15" y="{areaheight} - 15" width="15" height="15" quadrant="-4" color="{clrBlack}" />
 	</area>
-        <area condition="{isdummy}||not{hasposter}" x="{areawidth}*0.31" y="{areaheight}*0.825" width="{areawidth}*0.08" height="{areaheight}*0.06" layer="3">
+        <area condition="{isdummy}||not{hasposter}" x="{areawidth}*0.31" y="{areaheight}*0.825" width="{areawidth}*0.08" height="{areaheight}*0.06" layer="2">
             <drawimage imagetype="channellogo" path="{channelid}" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
 	</area>
-        <areascroll condition="not{isdummy}" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="slow" x="{areawidth}*0.41" y="{areaheight}*0.845" width="{areawidth}*0.47 - 2" height="{areaheight}*0.155 - {areawidth}*0.01 - 2" layer="3">
+        <areascroll condition="not{isdummy}" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="slow" x="{areawidth}*0.41" y="{areaheight}*0.845" width="{areawidth}*0.47 - 2" height="{areaheight}*0.155 - {areawidth}*0.01 - 2" layer="2">
             <drawtextbox x="0" y="0" width="100%" font="{regular}" fontsize="20%" color="{clrFontTvguideBright}" text="{description}" />
         </areascroll>
-        <area condition="{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.785" width="{areawidth}*0.47 - 2" height="{areaheight}*0.205 - {areawidth}*0.01 - 2" layer="3">
+        <area condition="{isdummy}" x="{areawidth}*0.41" y="{areaheight}*0.785" width="{areawidth}*0.47 - 2" height="{areaheight}*0.205 - {areawidth}*0.01 - 2" layer="2">
             <drawtext x="0" y="23%" font="{regular}" width="100%" fontsize="75%" color="{clrFontTvguideBright}" text="{title}" />
 	    <drawimage imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="100%" height="3"/>
         </area>
@@ -575,7 +575,7 @@
         <area x="{areawidth}*0.935 - {areaheight}*0.05" y="{areaheight}*0.78" width="{areaheight}*0.10" height="{areaheight}*0.10" layer="4">
             <drawimage imagetype="skinpart" path="watchhands/h_{hmins}" x="0" y="0" width="100%" height="100%"/>
         </area>
-        <area x="{areawidth}*0.895" y="{areaheight}*0.9" width="{areawidth}*0.08" height="{areaheight}*0.08" layer="3">
+        <area x="{areawidth}*0.895" y="{areaheight}*0.9" width="{areawidth}*0.08" height="{areaheight}*0.08" layer="2">
             <drawtext align="center" valign="top" font="{regular}" fontsize="35%" color="{clrWhite}" text="{dayname}" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="35%" color="{clrWhite}" text="{dayleadingzero}.{month}.{year}" />
             <drawtext align="center" valign="bottom" font="{regular}" fontsize="35%" color="{clrWhite}" text="{time}" />
@@ -592,7 +592,7 @@
         <area x="{areawidth}*0.935 - {areaheight}*0.05" y="{areaheight}*0.78" width="{areaheight}*0.10" height="{areaheight}*0.10" layer="4">
             <drawimage imagetype="skinpart" path="watchhands/h_{hmins}" x="0" y="0" width="100%" height="100%"/>
         </area>
-        <area x="{areawidth}*0.895" y="{areaheight}*0.9" width="{areawidth}*0.08" height="{areaheight}*0.08" layer="3">
+        <area x="{areawidth}*0.895" y="{areaheight}*0.9" width="{areawidth}*0.08" height="{areaheight}*0.08" layer="2">
             <drawtext align="center" valign="top" font="{regular}" fontsize="35%" color="{clrWhite}" text="{dayname}" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="35%" color="{clrWhite}" text="{dayleadingzero}.{month}.{year}" />
             <drawtext align="center" valign="bottom" font="{regular}" fontsize="35%" color="{clrWhite}" text="{time}" />
@@ -678,14 +678,14 @@
     {group}                  name of channel group
     -->
 
-    <grid name="channelgroups_hor" x="{areawidth}*0.98" y="{areawidth}*0.015" width="{areawidth}*0.01" height="{areaheight} - {areawidth}*0.03">
-        <area layer="3">
+    <grid name="channelgroups_hor" x="{areawidth}*0.979" y="{areawidth}*0.015" width="{areawidth}*0.01" height="{areaheight} - {areawidth}*0.03">
+        <area layer="4">
             <drawtextvertical direction="topdown" align="center" valign="center" font="{regular}" fontsize="100%" color="{clrWhite}" text="{group}" />
         </area>        
     </grid>
 
-    <grid name="channelgroups_ver" x="{areawidth}*0.98" y="{areawidth}*0.015" width="{areawidth}*0.01" height="{areaheight} - {areawidth}*0.03">
-        <area layer="3">
+    <grid name="channelgroups_ver" x="{areawidth}*0.979" y="{areawidth}*0.015" width="{areawidth}*0.01" height="{areaheight} - {areawidth}*0.03">
+        <area layer="4">
             <drawtextvertical direction="topdown" align="center" valign="center" font="{regular}" fontsize="100%" color="{clrWhite}" text="{group}" />
         </area>        
     </grid>
@@ -702,35 +702,11 @@
     -->
 
     <grid name="schedules_hor" x="{areawidth}*0.08" y="{areaheight}*0.03 + {areawidth}*0.01" width="{areawidth}*0.89 - 2" height="{areaheight}*0.67 - {areawidth}*0.02 - 2">
-        <area layer="3">
+        <area layer="2">
             <drawimage condition="not{current}" imagetype="skinpart" path="plug_tvguide/grid_horizontal" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
             <drawimage condition="{current}" imagetype="skinpart" path="plug_tvguide/grid_active_horizontal" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
         </area>
-        <area layer="6">
-	    <!-- rec border -->
-	    <drawrectangle condition="{timer}++not{searchtimer}" x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrRed}" />
-	    <drawrectangle condition="{timer}++not{searchtimer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
-	    <!-- zap border -->
-	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="0" width="{areawidth}" height="{areaheight}" color="{clrOrange}" />
-	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
-	    <!-- rec and zap border -->
-	    <drawrectangle condition="{timer}++{searchtimer}" x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrRed}" />
-	    <drawrectangle condition="{timer}++{searchtimer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrOrange}" />
-	    <drawrectangle condition="{timer}++{searchtimer}" x="2" y="2" width="{areawidth} - 4" height="{areaheight} - 4" color="{clrTransparent}" />
-<!--
-            <drawellipse condition="{timer}" x="2" y="70%" width="{areaheight}*0.8" height="{areaheight}*0.3 - 2" color="{clrRed}" quadrant="0"/>
-            <drawellipse condition="{timer}" x="2" y="70%" width="{areaheight}*0.8 - 2" height="{areaheight}*0.3 - 4" color="{clrTransparent}" quadrant="0"/>
-            <drawtext condition="{timer}++not{tvguideRecBlink}" name="rectext" x="{areaheight}*0.4 - {width(rectext)}/2 + 2" y="{areaheight}*0.70 - 1" width="{areaheight}*0.8" font="{italic}" fontsize="{areaheight}*0.3 - 2" color="{clrRed}" text="REC"/>
-            <drawtext condition="{timer}++{tvguideRecBlink}" name="rectext" x="{areaheight}*0.4 - {width(rectext)}/2 + 2" y="{areaheight}*0.70 - 1" width="{areaheight}*0.8" animtype="blink" animfreq="500" font="{italic}" fontsize="{areaheight}*0.3 - 2" color="{clrRed}" text="REC"/>
-            <drawellipse condition="{switchtimer}++not{timer}" x="2" y="70%" width="{areaheight}*0.8" height="{areaheight}*0.3 - 2" color="{clrOrange}" quadrant="0"/>
-            <drawellipse condition="{switchtimer}++not{timer}" x="2" y="70%" width="{areaheight}*0.8 - 2" height="{areaheight}*0.3 - 4" color="{clrTransparent}" quadrant="0"/>
-            <drawtext condition="{switchtimer}++not{timer}" name="zaptext" x="{areaheight}*0.4 - {width(zaptext)}/2 + 4" y="{areaheight}*0.70 - 1" width="{areaheight}*0.8" font="{italic}" fontsize="{areaheight}*0.3 - 2" color="{clrOrange}" text="ZAP"/>
-            <drawellipse condition="{switchtimer}++{timer}" x="{areaheight}*0.8 + 4" y="70%" width="{areaheight}*0.8" height="{areaheight}*0.3 - 2" color="{clrOrange}" quadrant="0"/>
-            <drawellipse condition="{switchtimer}++{timer}" x="{areaheight}*0.8 + 4" y="70%" width="{areaheight}*0.8 - 2" height="{areaheight}*0.3 - 4" color="{clrTransparent}" quadrant="0"/>
-            <drawtext condition="{switchtimer}++{timer}" name="zaptext" x="{areaheight}*1.2 - {width(zaptext)}/2 + 4" y="{areaheight}*0.70 - 1" width="{areaheight}*0.8" font="{italic}" fontsize="{areaheight}*0.3 - 2" color="{clrOrange}" text="ZAP"/>
--->
-        </area>
-        <area layer="5">
+        <area layer="3">
             <drawtext condition="not{dummy}++{current}" x="1%" valign="center" width="98%" font="{regular}" fontsize="{areaheight}*{tvguideGridFontSizeHor}/100" color="{clrFontTvguideGridBright}" text="{title}" />
             <drawtext condition="not{dummy}++not{current}" x="1%" valign="center" width="98%" font="{regular}" fontsize="{areaheight}*{tvguideGridFontSizeHor}/100" color="{clrFontTvguideGridDark}" text="{title}" />
             <drawtext condition="{dummy}++{current}" x="1%" valign="center" width="98%" font="{regular}" fontsize="{areaheight}*{tvguideGridFontSizeHor}/100" color="{clrFontTvguideGridBright}" text="{title}" />
@@ -738,34 +714,26 @@
             <drawimage condition="{tvguideGridLineHorizontal}" imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="{areawidth} - 3" height="3"/>
             <drawimage condition="{tvguideGridLineVertical}" imagetype="skinpart" path="line_vertical" x="{areawidth} - 3" y="0" width="3" height="100%"/>
 	</area>
+        <area layer="3">
+	    <!-- rec border -->
+	    <drawrectangle condition="{timer}++not{searchtimer}" x="0" y="0" width="{areawidth} - 1" height="{areaheight} - 1" color="{clrRed}" />
+	    <drawrectangle condition="{timer}++not{searchtimer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrTransparent}" />
+	    <!-- zap border -->
+	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="0" width="{areawidth - 1}" height="{areaheight} - 1" color="{clrOrange}" />
+	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrTransparent}" />
+	    <!-- rec and zap border -->
+	    <drawrectangle condition="{timer}++{searchtimer}" x="0" y="0" width="{areawidth} - 1" height="{areaheight} - 1" color="{clrRed}" />
+	    <drawrectangle condition="{timer}++{searchtimer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrOrange}" />
+	    <drawrectangle condition="{timer}++{searchtimer}" x="2" y="2" width="{areawidth} - 5" height="{areaheight} - 5" color="{clrTransparent}" />
+        </area>
     </grid>
 
     <grid name="schedules_ver" x="{areawidth}*0.0275" y="{areaheight}*0.05 + {areawidth}*0.01" width="{areawidth}*0.9425 - 2" height="{areaheight}*0.65 - {areawidth}*0.02 - 2">
-        <area layer="3">
+        <area layer="2">
             <drawimage condition="not{current}" imagetype="skinpart" path="plug_tvguide/grid_vertical" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
             <drawimage condition="{current}" imagetype="skinpart" path="plug_tvguide/grid_active_vertical" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
         </area>
-        <area layer="6">
-	    <!-- rec border -->
-	    <drawrectangle condition="{timer}++not{searchtimer}" x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrRed}" />
-	    <drawrectangle condition="{timer}++not{searchtimer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
-	    <!-- zap border -->
-	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="0" width="{areawidth}" height="{areaheight}" color="{clrOrange}" />
-	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
-	    <!-- rec and zap border -->
-	    <drawrectangle condition="{timer}++{searchtimer}" x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrRed}" />
-	    <drawrectangle condition="{timer}++{searchtimer}" x="1" y="1" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrOrange}" />
-	    <drawrectangle condition="{timer}++{searchtimer}" x="2" y="2" width="{areawidth} - 4" height="{areaheight} - 4" color="{clrTransparent}" />
-<!--
-            <drawimage condition="{timer}++not{tvguideRecBlink}" imagetype="icon" path="ico_timer_recording" x="2" y="{areawidth}*0.08" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
-            <drawimage condition="{timer}++{tvguideRecBlink}" imagetype="icon" path="ico_timer_recording" animtype="blink" animfreq="500" x="2" y="{areawidth}*0.08" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
-            <drawimage condition="{switchtimer}++not{timer}++not{tvguideRecBlink}" imagetype="icon" path="ico_timer_zap" x="2" y="8%" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
-            <drawimage condition="{switchtimer}++not{timer}++{tvguideRecBlink}" imagetype="icon" path="ico_timer_zap" animtype="blink" animfreq="500" x="2" y="8%" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
-            <drawimage condition="{switchtimer}++{timer}++not{tvguideRecBlink}" imagetype="icon" path="ico_timer_zap" x="4 + {areawidth}*0.15" y="8%" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
-            <drawimage condition="{switchtimer}++{timer}++{tvguideRecBlink}" imagetype="icon" path="ico_timer_zap" animtype="blink" animfreq="500" x="4 + {areawidth}*0.15" y="8%" width="{areawidth}*0.15" height="{areawidth}*0.15"/>
--->
-        </area>
-        <area layer="5">
+        <area layer="3">
             <drawtext condition="not{dummy}++{current}" x="1%" valign="top" width="98%" font="{regular}" fontsize="{areawidth}*{tvguideGridFontSizeVer}/500" color="{clrFontTvguideGridBright}" text="{title}" />
             <drawtext condition="not{dummy}++not{current}" x="1%" valign="top" width="98%" font="{regular}" fontsize="{areawidth}*{tvguideGridFontSizeVer}/500" color="{clrFontTvguideGridDark}" text="{title}" />
             <drawtext condition="{dummy}++{current}" x="1%" valign="top" width="98%" font="{regular}" fontsize="{areawidth}*{tvguideGridFontSizeVer}/500" color="{clrFontTvguideGridBright}" text="{title}" />
@@ -773,6 +741,18 @@
             <drawimage condition="{tvguideGridLineHorizontal}" imagetype="skinpart" path="line_horizontal" x="0" y="{areaheight} - 3" width="{areawidth} - 3" height="3"/>
             <drawimage condition="{tvguideGridLineVertical}" imagetype="skinpart" path="line_vertical" x="{areawidth} - 3" y="0" width="3" height="100%"/>
 	</area>
+        <area layer="3">
+	    <!-- rec border -->
+	    <drawrectangle condition="{timer}++not{searchtimer}" x="0" y="0" width="{areawidth} - 1" height="{areaheight} - 1" color="{clrRed}" />
+	    <drawrectangle condition="{timer}++not{searchtimer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrTransparent}" />
+	    <!-- zap border -->
+	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="0" width="{areawidth} - 1" height="{areaheight} - 1" color="{clrOrange}" />
+	    <drawrectangle condition="{searchtimer}++not{timer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrTransparent}" />
+	    <!-- rec and zap border -->
+	    <drawrectangle condition="{timer}++{searchtimer}" x="0" y="0" width="{areawidth} - 1" height="{areaheight} - 1" color="{clrRed}" />
+	    <drawrectangle condition="{timer}++{searchtimer}" x="1" y="1" width="{areawidth} - 3" height="{areaheight} - 3" color="{clrOrange}" />
+	    <drawrectangle condition="{timer}++{searchtimer}" x="2" y="2" width="{areawidth} - 5" height="{areaheight} - 5" color="{clrTransparent}" />
+        </area>
     </grid>
 
     <!-- Tokens available in channeljump
@@ -783,16 +763,3 @@
     </viewelement>
 
 </displayplugin>
-
-
-<!--
-    </grid>
-
-    </grid>
-
-    <grid name="channelgroups_ver" x="{areawidth}*0.9925 - 2" y="13%" width="{areawidth}*0.0075" height="74%">
-    </grid>
-
-    <grid name="schedules_ver" x="3%" y="5%" width="96%" height="63%">
-    </grid>
--->
