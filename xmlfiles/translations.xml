@@ -293,7 +293,7 @@
         </token>
         <token name="tr(Precipitationprobability)">
             <trans lang="en_EN">Precipitation Prob.</trans>
-            <trans lang="de_DE">Regenwahrscheinlichkeit</trans>
+            <trans lang="de_DE">Regenrisiko</trans>
         </token>
         <token name="tr(Precipitationintensity)">
             <trans lang="en_EN">Precipitation Intensity</trans>
@@ -350,6 +350,10 @@
         <token name="tr(from)">
             <trans lang="en_EN">from</trans>
             <trans lang="de_DE">aus</trans>
+        </token>
+        <token name="tr(at)">
+            <trans lang="en_EN">at</trans>
+            <trans lang="de_DE">um</trans>
         </token>
         <token name="tr(Felt)">
             <trans lang="en_EN">Felt</trans>
