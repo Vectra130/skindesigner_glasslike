@@ -16,7 +16,7 @@
         <parameter type="bool" name="mainmenuGlassEffect" displaytext="{tr(glasseffect)}">1</parameter>
     </submenu>
     <submenu name="DefaultMenu" displaytext="{tr(subdisplaymenudefault)}">
-        <parameter type="int" name="defaultmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">20</parameter>
+        <parameter type="int" name="defaultmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">14</parameter>
     </submenu>
     <submenu name="Channel" displaytext="{tr(subdisplaychannel)}">
         <parameter type="int" name="channelFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
@@ -70,6 +70,10 @@
         <parameter type="int" name="tvguideGridFontSizeVer" min="10" max="80" displaytext="{tr(gridfontsize)}">60</parameter>
         <parameter type="bool" name="tvguideRecBlink" displaytext="{tr(recblink)}">0</parameter>
     </submenu>
+    </submenu>
+    <submenu name="Vectra" displaytext="{tr(subspecial)}">
+        <parameter type="bool" name="vectraSetup" displaytext="{tr(vectrasetup)}">0</parameter>
+        <parameter type="bool" name="mainmenuWidgetUps" displaytext="UPS">0</parameter>
     </submenu>
     </menu>
 

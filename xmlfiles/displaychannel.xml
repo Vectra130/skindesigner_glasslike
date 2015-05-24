@@ -247,6 +247,7 @@
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="720" />
 	</area>
 
+<!--
 	<area condition="strnotequal({resolution}, 'sd576i')" x="{areawidth}*0.555" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
             <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
@@ -257,16 +258,28 @@
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="576" />
 	</area>
+-->
 
-	<area condition="not{isHD}" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+	<area condition="not{isHD}" x="{areawidth}*0.555" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
             <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="HDTV" />
 	</area>
-	<area condition="{isHD}" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+	<area condition="{isHD}" x="{areawidth}*0.555" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
             <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="HDTV" />
+	</area>
+
+	<area condition="{isHD}" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
+            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="SDTV" />
+	</area>
+	<area condition="not{isHD}" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
+            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="SDTV" />
 	</area>
 
 	<area condition="strnotequal({aspect}, '21:9')" x="{areawidth}*0.655" y="{areaheight}*0.952" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
