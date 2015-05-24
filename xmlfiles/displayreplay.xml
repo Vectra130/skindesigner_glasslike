@@ -117,6 +117,18 @@
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="720" />
 	</area>
 
+	<area condition="{isHD}" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
+            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="SDTV" />
+	</area>
+	<area condition="not{isHD}" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
+            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
+            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="SDTV" />
+	</area>
+
+<!--
 	<area condition="strnotequal({resolution}, 'sd576i')" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
             <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
@@ -127,6 +139,7 @@
             <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="576" />
 	</area>
+-->
 
 	<area condition="not{isHD}" x="{areawidth}*0.43" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
             <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
@@ -356,7 +369,7 @@
     -->
     <cutmarks>
 	<!-- ohne timeshift -->
-        <area condition="not{timeshift}" x="3%" y="{areaheight}*0.791" width="94%" height="4%" layer="3">
+        <area condition="not{timeshift}" x="{areawidth}*0.03" y="{areaheight}*0.791" width="{areawidth}*0.94" height="{areaheight}*0.008" layer="3">
             <loop name="marks" x="0" y="0" orientation="absolute">
                 <drawrectangle x="{marks[position]}/{marks[total]}*{areawidth}" y="0" width="1" height="100%" color="{clrTransWhite}" />
                 <drawrectangle condition="{marks[startmark]}" x="{marks[position]}/{marks[total]}*{areawidth}" y="0" width="5" height="1" color="{clrTransWhite}" />
@@ -367,7 +380,7 @@
             </loop>
         </area>
 	<!-- timeshift -->
-        <area condition="{timeshift}" x="3%" y="{areaheight}*0.791" width="94%" height="4%" layer="3">
+        <area condition="{timeshift}" x="{areawidth}*0.03" y="{areaheight}*0.791" width="{areawidth}*0.94" height="{areaheight}*0.008" layer="3">
             <loop name="marks" x="0" y="0" orientation="absolute">
                 <drawrectangle x="{marks[position]}/{marks[timeshifttotal]}*{areawidth}" y="0" width="1" height="100%" color="{clrTransWhite}" />
                 <drawrectangle condition="{marks[startmark]}" x="{marks[position]}/{marks[timeshifttotal]}*{areawidth}" y="0" width="5" height="1" color="{clrTransWhite}" />

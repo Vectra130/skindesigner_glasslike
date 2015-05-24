@@ -7,6 +7,7 @@
         <parameter type="int" name="mainmenuFadeTime" min="0" max="1000" displaytext="{tr(fadetime)}">50</parameter>
         <parameter type="int" name="mainmenuNumMenuItems" min="6" max="20" displaytext="{tr(nummenuitems)}">8</parameter>
         <parameter type="bool" name="mainmenuIcons" displaytext="{tr(icons)}">1</parameter>
+        <parameter type="bool" name="mainmenuItemNumber" displaytext="{tr(itemnumber)}">1</parameter>
         <parameter type="bool" name="mainmenuWidgetWeather" displaytext="{tr(widgetweather)}">1</parameter>
         <parameter type="bool" name="mainmenuWidgetSysInfo" displaytext="{tr(widgetsysinfo)}">1</parameter>
         <parameter type="bool" name="mainmenuWidgetRecordings" displaytext="{tr(widgetrecordings)}">0</parameter>
@@ -84,6 +85,10 @@
         <token name="tr(icons)">
             <trans lang="en_EN">Show Icons</trans>
             <trans lang="de_DE">Icons anzeigen</trans>
+        </token>
+        <token name="tr(itemnumber)">
+            <trans lang="en_EN">Show Item Numbers</trans>
+            <trans lang="de_DE">Nummerierung anzeigen</trans>
         </token>
         <token name="tr(fadetime)">
             <trans lang="en_EN">Fade time in ms</trans>

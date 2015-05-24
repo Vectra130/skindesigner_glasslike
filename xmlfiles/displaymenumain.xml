@@ -489,8 +489,8 @@
                 <drawimage cache="true" condition="{current}" imagetype="skinpart" path="menubuttonactive" x="0" y="10%" width="{areawidth}" height="{areaheight}*0.80"/>
             </area>
             <area x="1%" width="{areaheight}/{mainmenuNumMenuItems}" layer="3">
-                <drawtext condition="not{current}" align="center" valign="center" font="{regular}" fontsize="80%" color="{clrFontMenuItem}" text="{number}" />
-                <drawtext condition="{current}" align="center" valign="center" font="{bold}" fontsize="100%" color="{clrFontMenuItemSelected}" text="{number}" />
+                <drawtext condition="not{current}++{mainmenuItemNumber}" align="center" valign="center" font="{regular}" fontsize="80%" color="{clrFontMenuItem}" text="{number}" />
+                <drawtext condition="{current}++{mainmenuItemNumber}" align="center" valign="center" font="{bold}" fontsize="100%" color="{clrFontMenuItemSelected}" text="{number}" />
 	    </area>
             <area condition="{mainmenuIcons}" x="6%" width="{areaheight}/{mainmenuNumMenuItems}" layer="3">
                 <drawimage cache="true" imagetype="menuicon" path="{icon}" x="0" valign="center" width="{areaheight}*0.95" height="{areaheight}*0.95"/>
