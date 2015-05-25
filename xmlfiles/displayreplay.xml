@@ -96,194 +96,76 @@
     -->
     <recinfo>
 	<area condition="strnotequal({resolution}, 'hd1080i')" x="{areawidth}*0.28" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="1080" />
 	</area>
 	<area condition="strequal({resolution}, 'hd1080i')" x="{areawidth}*0.28" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="1080" />
 	</area>
 
 	<area condition="strnotequal({resolution}, 'hd720p')" x="{areawidth}*0.33" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="720" />
 	</area>
 	<area condition="strequal({resolution}, 'hd720p')" x="{areawidth}*0.33" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="720" />
 	</area>
 
 	<area condition="{isHD}" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="SDTV" />
 	</area>
 	<area condition="not{isHD}" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="SDTV" />
 	</area>
 
-<!--
-	<area condition="strnotequal({resolution}, 'sd576i')" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="576" />
-	</area>
-	<area condition="strequal({resolution}, 'sd576i')" x="{areawidth}*0.38" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="576" />
-	</area>
--->
-
 	<area condition="not{isHD}" x="{areawidth}*0.43" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="HDTV" />
 	</area>
 	<area condition="{isHD}" x="{areawidth}*0.43" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="HDTV" />
 	</area>
 
 	<area condition="strnotequal({aspect}, '21:9')" x="{areawidth}*0.48" y="{areaheight}*0.957" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="21:9" />
 	</area>
 	<area condition="strequal({aspect}, '21:9')" x="{areawidth}*0.48" y="{areaheight}*0.957" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="21:9" />
 	</area>
 
 	<area condition="strnotequal({aspect}, '16:9')" x="{areawidth}*0.53" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="16:9" />
 	</area>
 	<area condition="strequal({aspect}, '16:9')" x="{areawidth}*0.53" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="16:9" />
 	</area>
 
 	<area condition="strnotequal({aspect}, '4:3')" x="{areawidth}*0.58" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="4:3" />
 	</area>
 	<area condition="strequal({aspect}, '4:3')" x="{areawidth}*0.58" y="{areaheight}*0.955" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="4:3" />
 	</area>
 
 	<area condition="not{isWideScreen}" x="{areawidth}*0.63" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="WIDE" />
 	</area>
 	<area condition="{isWideScreen}" x="{areawidth}*0.63" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="WIDE" />
 	</area>
-<!--
-	<area condition="strnotequal({resolution}, 'hd1080i')" x="{areawidth}*0.305" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="1080" />
-	</area>
-	<area condition="strequal({resolution}, 'hd1080i')" x="{areawidth}*0.305" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="1080" />
-	</area>
-
-	<area condition="strnotequal({resolution}, 'hd720p')" x="{areawidth}*0.355" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="720" />
-	</area>
-	<area condition="strequal({resolution}, 'hd720p')" x="{areawidth}*0.355" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="720" />
-	</area>
-
-	<area condition="strnotequal({resolution}, 'sd576i')" x="{areawidth}*0.405" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="576" />
-	</area>
-	<area condition="strequal({resolution}, 'sd576i')" x="{areawidth}*0.405" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="576" />
-	</area>
-
-	<area condition="not{isHD}" x="{areawidth}*0.455" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="HDTV" />
-	</area>
-	<area condition="{isHD}" x="{areawidth}*0.455" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="HDTV" />
-	</area>
-
-	<area condition="strnotequal({aspect}, '21:9')" x="{areawidth}*0.505" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="21:9" />
-	</area>
-	<area condition="strequal({aspect}, '21:9')" x="{areawidth}*0.505" y="{areaheight}*0.956" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="21:9" />
-	</area>
-
-	<area condition="strnotequal({aspect}, '16:9')" x="{areawidth}*0.555" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="16:9" />
-	</area>
-	<area condition="strequal({aspect}, '16:9')" x="{areawidth}*0.555" y="{areaheight}*0.954" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="16:9" />
-	</area>
-
-	<area condition="strnotequal({aspect}, '4:3')" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="4:3" />
-	</area>
-	<area condition="strequal({aspect}, '4:3')" x="{areawidth}*0.605" y="{areaheight}*0.953" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="4:3" />
-	</area>
-
-	<area condition="not{isWideScreen}" x="{areawidth}*0.655" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="WIDE" />
-	</area>
-	<area condition="{isWideScreen}" x="{areawidth}*0.655" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
-	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="WIDE" />
-	</area>
--->
     </recinfo>
 
     <!-- Available Variables currenttime:
@@ -303,17 +185,16 @@
     <totaltime>
         <area x="67%" y="81%" width="30%" height="4%" layer="2">
             <drawtext condition="not{timeshift}" align="right" valign="center" font="{regular}" fontsize="100%" color="{clrWhite}" text="{rectotal}" />
-            <drawtext condition="{timeshift}" align="right" valign="center" font="{regular}" fontsize="100%" color="{clrWhite}" text="{timeshifttotal} ({rectotal})" />
+            <drawtext condition="{timeshift}" name="totaltime" align="right" valign="center" font="{regular}" fontsize="100%" color="{clrWhite}" text="({rectotal})" />
+            <drawtext condition="{timeshift}" x="{posx(totaltime)} - {width(totaltime)}" valign="center" font="{regular}" fontsize="100%" color="{clrTimeshiftProgressbar}" text="{timeshifttotal}" />
 	</area>
 	<!-- timeshift info icon -->
 	<area condition="not{timeshift}" x="{areawidth}*0.68" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconInactive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_inactive" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconInactive}" text="TimeShift" />
 	</area>
 	<area condition="{timeshift}" x="{areawidth}*0.68" y="{areaheight}*0.951" width="{areawidth}*0.04" height="{areaheight}*0.03"  layer="2">
-            <drawellipse x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrStatusIconActive}" quadrant="0" />
-            <drawellipse x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" quadrant="0" />
+	    <drawimage x="0" y="0" width="{areawidth}" height="{areaheight}" imagetype="icon" path="ico_status_active" />
 	    <drawtext name="text" x="{areawidth}/2 - {width(text)}/2 - 1" valign="center" width="{areawidth} - 2" font="{italic}" fontsize="{areaheight}*0.75" color="{clrStatusIconActive}" text="TimeShift" />
 	</area>
     </totaltime>
