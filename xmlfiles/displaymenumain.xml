@@ -241,7 +241,7 @@
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy3} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 5" width="{areawidth}*0.11" height="{areaheight}*{mainmenuWidgetInfoFontSizeScala}" layer="2">
             <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="0" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="°C" />
-            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="60" />
+            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="80" />
 	</area>
 	<!-- gpu temp -->
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy4}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
@@ -265,7 +265,7 @@
 	<area background="true" x="{areawidth}*{mainmenuWidgetInfoPosx2}" y="{areaheight}*{mainmenuWidgetInfoPosy4} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 5" width="{areawidth}*0.11" height="{areaheight}*{mainmenuWidgetInfoFontSizeScala}" layer="2">
             <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="0" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="°C" />
-            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="60" />
+            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="80" />
 	</area>
     </temperatures>
 
@@ -460,7 +460,7 @@
 	<area condition="isset{ctUpsSTATUS}" background="true" x="{areawidth}*{mainmenuWidgetInfoPosx4}" y="{areaheight}*{mainmenuWidgetInfoPosy4} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 5" width="{areawidth}*0.11" height="{areaheight}*{mainmenuWidgetInfoFontSizeScala}" layer="2">
             <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="0" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="°C" />
-            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="60" />
+            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="80" />
 	</area>
     </customtokens>
 
