@@ -477,9 +477,8 @@
         <area x="0" y="0" width="100%" height="100%" layer="6">
             <fill color="{clrTransBlackDark}" />
         </area>
-        <area x="0" y="0" width="100%" height="100%" layer="8" transparency="75">
+        <area x="0" y="0" width="100%" height="100%" layer="7" transparency="75">
             <drawimage condition="{isseries}" imagetype="image" path="{seriesposter1path}" align="center" valign="center" height="{areaheight}*0.98" width="{areaheight} * 0.98 * {seriesposter1height} / {seriesposter1width}"/>
-
 	    <drawtext condition="{ismovie}" name="movtitle" align="center" y="1%" font="{regular}" fontsize="8%" color="{clrGray}" text="{movietitle}" />
             <drawrectangle condition="{showposter}++{ismovie}" x="3%" y="{posy(movtitle)} + {height(movtitle)} + 3" width="96%" height="4" color="{clrGray}" />
             <drawimage condition="{showposter}++{ismovie}" name="poster" imagetype="image" path="{posterpath}" x="1%" y="{posy(movtitle)} + {height(movtitle)} + 10" width="{areaheight} * 0.98  * {posterwidth} / {posterheight}" height="{areaheight} * 0.98"/>

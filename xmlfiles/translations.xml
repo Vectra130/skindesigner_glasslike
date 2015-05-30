@@ -439,4 +439,8 @@
             <trans lang="en_EN">Playback ends at</trans>
             <trans lang="de_DE">Wiedergabe endet um</trans>
         </token>
+        <token name="tr(Plex for VDR)">
+            <trans lang="en_EN">Plex for VDR</trans>
+            <trans lang="de_DE">Plex für VDR</trans>
+        </token>
 </translations>
