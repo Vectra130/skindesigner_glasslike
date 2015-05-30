@@ -109,9 +109,5 @@
         <font name="mediumitalic">Roboto:MediumItalic</font>
         <font name="thin">Roboto:Thin</font>
         <font name="thinitalic">Roboto:ThinItalic</font>
-<!--
-        <font name="digital">digital-7:Regular</font>
--->
-        <font name="digital">DS-Digital:Normal</font>
     </fonts>
 </globals>
