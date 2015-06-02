@@ -101,83 +101,17 @@ displayplugin SYSTEM
     -->
 
     <viewelement name="header">
-	<!-- poster -->
-<!--
-        <area condition="{posteravailable}" x="{areawidth}*0.31" y="{areaheight} - {areawidth}*0.01 - {areawidth}*0.08*{posterheight}/{posterwidth}" width="{areawidth}*0.08" height="{areawidth}*0.08*{posterheight}/{posterwidth}" layer="2">
-	    <drawrectangle x="{posx(poster_window)}" y="{posy(poster_window)}" width="{width(poster_window)} + 2" height="{height(poster_window)} + 2" color="{clrBorder}" />
-	    <drawrectangle name="poster_window" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrTransparent}" />
-            <drawimage imagetype="image" path="{posterpath}" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2"/>
-            <drawellipse x="0" y="0" width="15" height="15" quadrant="-2" color="{clrBlack}" />
-            <drawellipse x="{areawidth} - 15" y="0" width="13" height="15" quadrant="-1" color="{clrBorder}" />
-            <drawellipse x="{areawidth} - 15" y="0" width="15" height="15" quadrant="-1" color="{clrBlack}" />
-            <drawellipse x="0" y="{areaheight} - 15" width="15" height="13" quadrant="-3" color="{clrBorder}" />
-            <drawellipse x="0" y="{areaheight} - 15" width="15" height="15" quadrant="-3" color="{clrBlack}" />
-            <drawellipse x="{areawidth} - 17" y="{areaheight} - 17" width="15" height="15" quadrant="-4" color="{clrBorder}" />
-            <drawellipse x="{areawidth} - 15" y="{areaheight} - 15" width="15" height="15" quadrant="-4" color="{clrBlack}" />
-	</area>
--->
 	<!-- logo -->
         <area x="{areawidth}*0.28" y="{areaheight}*0.78" width="{areawidth}*0.14" height="{areaheight}*0.14" layer="2">
             <drawimage imagetype="menuicon" path="pluginicons/plex" x="0" y="0" width="{areawidth}" height="{areaheight}"/>
 	</area>
-	<!-- main window -->
-	<area background="true" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
-	    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
-	    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
-	</area>
-	<area background="true" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71" height="{areaheight}*0.70 - {areawidth}*0.02" layer="3">
-	    <drawellipse x="0" y="0" width="15" height="15" quadrant="-2" color="{clrBlack}" />
-	    <drawellipse x="{areawidth} - 2 - 13" y="0" width="13" height="15" quadrant="-1" color="{clrBorder}" />
-	    <drawellipse x="{areawidth} - 2 - 13" y="0" width="15" height="15" quadrant="-1" color="{clrBlack}" />
-	    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="13" quadrant="-3" color="{clrBorder}" />
-	    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-3" color="{clrBlack}" />
-	    <drawellipse x="{areawidth} - 2 - 15" y="{areaheight} - 2 - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
-	    <drawellipse x="{areawidth} - 2 - 13" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
-	</area>
-	<!-- main window 2 -->
-	<area background="true" x="{areawidth}*0.73" y="{areawidth}*0.01" width="{areawidth}*0.24" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
-	    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
-	    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
-	    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)}" width="15" height="15" quadrant="-2" color="{clrBlack}" />
-	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)}" width="13" height="15" quadrant="-1" color="{clrBorder}" />
-	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)}" width="15" height="15" quadrant="-1" color="{clrBlack}" />
-	    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="13" quadrant="-3" color="{clrBorder}" />
-	    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="15" quadrant="-3" color="{clrBlack}" />
-	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 15" y="{posy(mainframe)} + {height(mainframe)} - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
-	    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
-	</area>
         <!-- title -->
-<!--
-        <area x="{areawidth}*0.41" y="{areaheight}*0.79" width="{areawidth}*0.47 - 2" height="{areaheight}*0.045" layer="3">
-            <drawtext align="center" valign="center" font="{regular}" fontsize="100%" color="{clrFontMenuBright}" text="{tr(Plex for VDR)}" />
-        </area>
--->
         <area x="{areawidth}*0.41" y="{areaheight}*0.85" width="{areawidth}*0.47 - 2" height="{areaheight}*0.01" layer="2">
             <drawimage condition="not{running}" align="center" valign="center" imagetype="skinpart" path="line_horizontal" width="100%" height="3" />
         </area>
-	<!-- progressbar -->
-<!--
-            <area condition="{running}" x="{areawidth}*0.41" y="{areaheight}*0.85" width="{areawidth}*0.47 - 2" height="{areaheight}*0.01" layer="2">
-                <drawellipse x="0" y="0" width="{areaheight}" height="{areaheight}" color="{clrChannelProgressbarBg}" quadrant="0" />
-                <drawellipse x="{areawidth}-{areaheight}" y="0" width="{areaheight}" height="{areaheight}" color="{clrChannelProgressbarBg}" quadrant="0" />
-                <drawrectangle x="{areaheight}/2" y="0" width="{areawidth} - {areaheight}" height="{areaheight}" color="{clrChannelProgressbarBg}" />
-	    </area>
-            <area condition="{running}" x="{areawidth}*0.41" y="{areaheight}*0.85" width="{areawidth}*0.47 - 2" height="{areaheight}*0.01" layer="3">
-                <drawellipse x="1" y="1" width="{areaheight}-2" height="{areaheight}-2" color="{clrProgressbar}" quadrant="0" />
-                <drawellipse x="1 + {elapsed}/{duration}*{areawidth} - {elapsed}/{duration}*{areaheight}" y="1" width="{areaheight}-2" height="{areaheight}-2" color="{clrProgressbar}" quadrant="0" />
-                <drawrectangle x="{areaheight}/2" y="1" width="{elapsed}/{duration}*{areawidth} - {elapsed}/{duration}*{areaheight}" height="{areaheight}-2" color="{clrProgressbar}" />
-	    </area>
-            <area condition="{running}" x="{areawidth}*0.41" y="{areaheight}*0.85" width="{areawidth}*0.47 - 2" height="{areaheight}*0.01" layer="4">
-	        <drawimage imagetype="skinpart" path="horizontalbartop" x="1" y="1" width="{elapsed}/{duration}*{areawidth} - {elapsed}/{duration}*{areaheight} + {areaheight}-2" height="{areaheight}-2"/>
-	    </area>
--->
 	<!-- info -->
         <area x="{areawidth}*0.41" y="{areaheight}*0.87" width="{areawidth}*0.47 - 2" height="{areaheight}*0.13 - {areawidth}*0.01 - 2" layer="3">
             <drawtext align="center" y="{areaheight}*0.15" font="{regular}" fontsize="60%" color="{clrFontMenuDark}" text="{tabname}" />
-<!--
-            <drawtext align="center" y="{areaheight}*0.45" font="{regular}" fontsize="30%" color="{clrFontMenuDark}" text="{year}" />
-            <drawtext condition="{running}" align="center" y="{areaheight}*0.45" font="{regular}" fontsize="30%" color="{clrFontMenuDark}" text="{day} {printf('%02d.%02d', daynumeric, month)}.{year}    {start} - {stop}    ({elapsed}/{duration}min)" />
--->
         </area>
    </viewelement>
 
@@ -230,25 +164,55 @@ displayplugin SYSTEM
 	</viewelement>
 
 	<viewelement name="infopane">
+		<!-- main window -->
+		<area condition="eq({viewmode}, 0)||eq({viewmode}, 1)" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
+		    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
+		    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
+		</area>
+		<area condition="eq({viewmode}, 0)||eq({viewmode}, 1)" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71" height="{areaheight}*0.70 - {areawidth}*0.02" layer="3">
+		    <drawellipse x="0" y="0" width="15" height="15" quadrant="-2" color="{clrBlack}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="0" width="13" height="15" quadrant="-1" color="{clrBorder}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="0" width="15" height="15" quadrant="-1" color="{clrBlack}" />
+		    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="13" quadrant="-3" color="{clrBorder}" />
+		    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-3" color="{clrBlack}" />
+		    <drawellipse x="{areawidth} - 2 - 15" y="{areaheight} - 2 - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
+		</area>
+		<area condition="eq({viewmode}, 2)" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.96" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
+		    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
+		    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
+		</area>
+		<area condition="eq({viewmode}, 2)" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.96" height="{areaheight}*0.70 - {areawidth}*0.02" layer="3">
+		    <drawellipse x="0" y="0" width="15" height="15" quadrant="-2" color="{clrBlack}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="0" width="13" height="15" quadrant="-1" color="{clrBorder}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="0" width="15" height="15" quadrant="-1" color="{clrBlack}" />
+		    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="13" quadrant="-3" color="{clrBorder}" />
+		    <drawellipse x="0" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-3" color="{clrBlack}" />
+		    <drawellipse x="{areawidth} - 2 - 15" y="{areaheight} - 2 - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
+		    <drawellipse x="{areawidth} - 2 - 13" y="{areaheight} - 2 - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
+		</area>
+		<!-- main window 2 -->
+		<area condition="eq({viewmode}, 0)||eq({viewmode}, 1)" x="{areawidth}*0.73" y="{areawidth}*0.01" width="{areawidth}*0.24" height="{areaheight}*0.70 - {areawidth}*0.02" layer="2">
+		    <drawrectangle x="0" y="0" width="100%" height="100%" color="{clrBorder}" />
+		    <drawrectangle name="mainframe" x="0" y="0" width="{areawidth} - 2" height="{areaheight} - 2" color="{clrBackground}" />
+		    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)}" width="15" height="15" quadrant="-2" color="{clrBlack}" />
+		    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)}" width="13" height="15" quadrant="-1" color="{clrBorder}" />
+		    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)}" width="15" height="15" quadrant="-1" color="{clrBlack}" />
+		    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="13" quadrant="-3" color="{clrBorder}" />
+		    <drawellipse x="{posx(mainframe)}" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="15" quadrant="-3" color="{clrBlack}" />
+		    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 15" y="{posy(mainframe)} + {height(mainframe)} - 15" width="15" height="15" quadrant="-4" color="{clrBorder}" />
+		    <drawellipse x="{posx(mainframe)} + {width(mainframe)} - 13" y="{posy(mainframe)} + {height(mainframe)} - 13" width="15" height="15" quadrant="-4" color="{clrBlack}" />
+		</area>
+		<!-- infos -->
 	        <area x="{areawidth}*0.41" y="{areaheight}*0.79" width="{areawidth}*0.47 - 2" height="{areaheight}*0.045" layer="3">
 			<drawtext condition="isset{title}" align="center" valign="center" width="100%" font="{regular}" fontsize="100%" color="{clrWhite}" text="{title}" />
 		</area>
-		<area condition="eq({viewmode}, 0)" x="{areawidth}*0.74" y="{areawidth}*0.02" width="{areawidth}*0.22" height="{areaheight}*0.24 - {areawidth}*0.02"  layer="2">
+		<area condition="eq({viewmode}, 0)||eq({viewmode}, 1)" x="{areawidth}*0.74" y="{areawidth}*0.02" width="{areawidth}*0.22" height="{areaheight}*0.24 - {areawidth}*0.02"  layer="2">
 			<drawimage condition="{hasart}++not{isepisode}" imagetype="image" path="{art}" x="0" y="0" width="100%" height="100%" />
 			<drawimage condition="{hasthumb}++{isepisode}" imagetype="image" path="{thumb}" x="0" y="0" width="100%" height="100%" />
 		</area>
-		<areascroll condition="eq({viewmode}, 0)" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="medium" x="{areawidth}*0.74" y="{areawidth}*0.01 + {areaheight}*0.25" width="{areawidth}*0.22 - 2" height="{areaheight}*0.45 - {areawidth}*0.02 - 2" layer="4">
+		<areascroll condition="eq({viewmode}, 0)||eq({viewmode}, 1)" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="medium" x="{areawidth}*0.74" y="{areawidth}*0.01 + {areaheight}*0.25" width="{areawidth}*0.22 - 2" height="{areaheight}*0.45 - {areawidth}*0.02 - 2" layer="4">
 			<drawtextbox condition="isset{summary}" x="0" y="0" width="100%" font="{regular}" fontsize="7%" color="{clrWhite}" text="{summary}" />
-		</areascroll>
-		<area condition="eq({viewmode}, 1)" x="62%" y="14%" width="34%" height="4%"  layer="2">
-			<drawtext x="0" y="2%" align="center" width="100%" font="{semibold}" fontsize="90%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="eq({viewmode}, 1)" x="62%" y="12%" width="34%" height="32%"  layer="2">
-			<drawimage condition="{hasart}++not{isepisode}" imagetype="image" path="{art}" x="0" y="25%" width="100%" height="100%" />
-			<drawimage condition="{hasthumb}++{isepisode}" imagetype="image" path="{thumb}" x="0" y="25%" width="100%" height="100%" />
-		</area>
-		<areascroll condition="eq({viewmode}, 1)" orientation="vertical" mode="forthandback" delay="1000" scrollspeed="medium" x="62%" y="46%" width="34%" height="43%" layer="4">
-			<drawtextbox condition="isset{summary}" x="0" y="0" width="100%" font="{light}" fontsize="7%" color="{clrLightGray}" text="{summary}" />
 		</areascroll>
 	</viewelement>
 
@@ -314,22 +278,12 @@ displayplugin SYSTEM
 	-->
 
 	<grid name="coverbrowser" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71 - 2" height="{areaheight}*0.70 - {areawidth}*0.02 - 2">
-<!--
-		<area condition="lt({rows}, 2)||gt({rows}, 2)||lt({columns}, 7)||gt({columns}, 7)" layer="6">
-			<drawimage x="0" y="0" width="100%" height="100%" imagetype="skinpart" path="plug_tvguide/button" />
-		</area>
-		<area condition="lt({rows}, 2)||gt({rows}, 2)||lt({columns}, 7)||gt({columns}, 7)" x="2%" y="2%" width="90%" height="90%" layer="6">
-			<drawtext animtype="blink" animfreq="1500" x="0" y="0" font="{regular}" fontsize="25%" color="{clrRed}" text="{tr(For_Cover-View_please_set)}:" />
-			<drawtext animtype="blink" animfreq="1500" x="0" y="30%" font="{regular}" fontsize="25%" color="{clrWhite}" text="{tr(Cover_Grid_Columns)}: 7"/>
-			<drawtext animtype="blink" animfreq="1500" x="0" y="60%" font="{regular}" fontsize="25%" color="{clrWhite}" text="{tr(Cover_Grid_Rows)}: 2"/>
-		</area>
--->
 		<area condition="{current}" layer="2">
-<!--
-			<drawimage condition="{current}" x="0" y="0" width="100%" height="100%" imagetype="skinpart" path="plug_plex/grid_active_vertical" />
-			<drawrectangle x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrProgressbar}" />
--->
 			<fill color="{clrProgressbar}" />
+		</area> 
+		<area layer="2">
+			<drawrectangle x="0" y="{areaheight} - 1" width="{areawidth}" height="1" color="{clrFontMenuItemDark}" />
+			<drawrectangle x="{areawidth} - 1" y="0" width="1" height="{areaheight}" color="{clrFontMenuItemDark}" />
 		</area> 
 		<area condition="{ismovie}" layer="4">
 			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plug_plex/placeholder" align="center" y="0" width="90%" height="99%" />
@@ -367,43 +321,9 @@ displayplugin SYSTEM
 		<area condition="{ismovie}||{isepisode}" layer="6">
 			<drawimage name="stars" condition="gt({rating}, 0)" imagetype="skinpart" path="plug_plex/stars" x="30%" y="86%" width="{areawidth}*0.4" height="{areaheight}*0.05" />
 		</area>
-<!--
-		<area condition="{isepisode}" layer="3">
-			<drawimage name="thumb" condition="not{hasseriesthumb}" imagetype="skinpart" path="plexplaceholder" align="center" y="0" width="90%" height="90%" />
-			<drawimage name="thumb" condition="{hasseriesthumb}" imagetype="image" path="{seriesthumb}" align="center" x="0" y="0" width="90%" height="90%" />
-			<drawrectangle x="5%" y="{height(thumb)}*0.92" width="{viewoffset}/{duration}*{areawidth}*0.9" height="1%" color="{clrBlue}" />
-			<drawtext condition="eq({viewgroup}, 4)" name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-			<drawtext condition="lt({viewgroup}, 4)" name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{seriestitle}" />
-			<drawtext name="season" x="10%" y="{posy(title)} + {height(title)}" width="80%" font="{light}" fontsize="6%" color="{clrLightGray}" text="{printf('S%02d E%02d', season, episode)}" />
-		</area>
-		<area condition="{isdirectory}" layer="3">
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" align="center" x="0" y="0" width="90%" height="90%" />
-			<drawimage debug="true" name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" align="center" x="0" y="0" width="100%" height="80%" />
-			<drawtext name="title" x="10%" y="{height(thumb)}*0.96"  width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="{isshow}" layer="3">
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" align="center" x="0" y="0" width="80%" height="80%" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" align="center" x="0" y="0" width="100%" height="80%" />
-			<drawtext name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="{isseason}" layer="3">
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" align="center" x="0" y="0" width="80%" height="80%" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" align="center" x="0" y="0" width="80%" height="80%" />
-			<drawtext name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="{isdummy}" layer="3">
-			<drawimage name="thumb" imagetype="skinpart" path="plexplaceholder" align="center" x="0" y="0" width="80%" height="80%" />
-			<drawtext name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="{isserver}" layer="3">
-			<drawimage name="thumb" imagetype="skinpart" path="plexplaceholder" align="center" x="0" y="0" width="80%" height="80%" />
-			<drawtext name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="6%" color="{clrLightGray}" text="{title}" />
-			<drawtext x="10%" y="{posy(title)} + {height(title)}" width="80%" font="{light}" fontsize="6%" color="{clrLightGray}" text="{serverstartpointname}" />
-		</area>
--->
 	</grid>
 	
-	<grid name="detailbrowser" x="1%" y="1%" width="96%" height="70%">
+	<grid name="detailbrowser" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.96 - 2" height="{areaheight}*0.70 - {areawidth}*0.02 - 2">
 		<area condition="lt({rows}, 4)||gt({rows}, 4)||lt({columns}, 1)||gt({columns}, 1)" layer="7">
 			<drawimage x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonRootTVG_ver" />
 		</area>
@@ -470,70 +390,45 @@ displayplugin SYSTEM
 		</area>
 	</grid>
 
-	<grid name="listbrowser" x="1%" y="1%" width="96%" height="70%">
-		<area condition="lt({rows}, 14)||gt({rows}, 14)||lt({columns}, 1)||gt({columns}, 1)" layer="7">
-			<drawimage x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonLong1" />
-		</area>
-		<area condition="lt({rows}, 14)||gt({rows}, 14)||lt({columns}, 1)||gt({columns}, 1)" x="2%" y="0" width="90%" height="100%" layer="7">
-			<drawtext animtype="blink" animfreq="1500" x="0" y="0" font="{semibold}" fontsize="50%" color="{clrRed}" text="{tr(For_List-View_please_set)}:" />
-			<drawtext animtype="blink" animfreq="1500" x="0" y="50%" font="{light}" fontsize="50%" color="{clrLightGray}" text="{tr(List_Grid_Columns)}: 1, {tr(List_Grid_Rows)}: 14"/>
-		</area>
+	<grid name="listbrowser" x="{areawidth}*0.01" y="{areawidth}*0.01" width="{areawidth}*0.71 - 2" height="{areaheight}*0.70 - {areawidth}*0.02 - 2">
+		<area condition="{current}" layer="2">
+			<fill color="{clrProgressbar}" />
+		</area> 
 		<area layer="2">
-			<drawimage condition="not{current}" x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonLong1" />
-			<drawimage condition="{current}++eq({coloredButtons}, 0)" x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonLongActive" />
-			<drawimage condition="{current}++eq({coloredButtons}, 1)" x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonLongActiveColor" />
-			<drawimage condition="{current}++eq({coloredButtons}, 2)" x="0" y="0%" width="100%" height="100%" imagetype="skinpart" path="buttonLongActive_Gradient" />
-		</area>
+	                <drawimage align="center" y="{areaheight} - 3" imagetype="skinpart" path="line_horizontal" width="100%" height="3" />
+		</area> 
 		<area condition="{ismovie}" layer="4">
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawtext name="title" x="5%" y="8%" width="62%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title}" />
-			<drawtext x="95%" y="10%" width="5%" font="{light}" fontsize="45%" color="{clrLightGray}" text="{year}" />
-			<drawtext x="88%" y="10%" width="7%" font="{light}" fontsize="45%" color="{clrLightGray}" text="{duration}min" />
-			<drawtext x="83%" y="10%" width="5%" font="{light}" fontsize="45%" color="{clrLightGray}" text="{audioCodec}" />
-			<drawtext x="78%" y="10%" width="5%" font="{light}" fontsize="45%" color="{clrLightGray}" text="{container}" />
-			<drawimage name="stars" condition="gt({rating}, 0)" imagetype="skinpart" path="starsFull" x="68%" y="15%" width="{areaheight}*1.56" height="{areaheight}*0.3" />
-			<drawrectangle condition="gt({rating}, 0)" x="{posx(stars)}+{width(stars)}*{rating}/100" y="15%" width="{width(stars)}-{rating}/100*{width(stars)}" height="{areaheight}*0.3" color="{clrTransparent}" />
-		</area>
-		<area condition="{ismovie}" layer="5">
-			<drawimage name="stars" condition="gt({rating}, 0)" imagetype="skinpart" path="stars" x="68%" y="15%" width="{areaheight}*1.56" height="{areaheight}*0.3" />
-		</area>
-		<!--progressbar-->
-		<area condition="{ismovie}||{isepisode}" layer="4">
-			<drawimage condition="{coloredElapsed}++{duration}" x="0%" y="{areaheight}-3" width="{areawidth}*{viewoffset}/{duration}*0.945" height="{areaheight}/20" imagetype="skinpart" path="elapsedBar" />
-			<drawimage condition="not{coloredElapsed}++{duration}" x="4%" y="{areaheight}-3" width="{areawidth}*{viewoffset}/{duration}*0.945" height="{areaheight}/20" imagetype="skinpart" path="elapsedBarMono" />
+			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plug_plex/placeholder" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawimage condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawrectangle x="70%" y="80%" width="{viewoffset}/{duration}*{areawidth}*0.05" height="1%" color="{clrFontMenuItemBright}" />
 		</area>
 		<area condition="{isepisode}" layer="4">
-			<drawimage name="thumb" condition="not{hasseriesthumb}" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawimage name="thumb" condition="{hasseriesthumb}" imagetype="image" path="{seriesthumb}" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawtext condition="eq({viewgroup}, 4)" name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="65%" color="{clrLightGray}" text="{title}" />
-			<drawtext condition="lt({viewgroup}, 4)" name="title" x="10%" y="{height(thumb)}*0.96" width="80%" font="{semibold}" fontsize="65%" color="{clrLightGray}" text="{seriestitle}" />
-			<drawtext name="season" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title} {printf('S%02d E%02d', season, episode)}" />
+			<drawimage name="seriesthumb" condition="not{hasseriesthumb}" imagetype="skinpart" path="plug_plex/placeholder" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawimage condition="{hasseriesthumb}" imagetype="image" path="{seriesthumb}" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawrectangle x="70%" y="80%" width="{viewoffset}/{duration}*{areawidth}*0.05" height="1%" color="{clrFontMenuItemBright}" />
 		</area>
-		<area condition="{isdirectory}" layer="3"> <!--Biblio-->
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawtext name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title}" />
+		<area condition="{isdirectory}||{isshow}||{isseason}||{isdummy}||{isserver}" layer="4">
+			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plug_plex/placeholder" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawimage condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="2" width="{areawidth}*0.04 - 5" height="{areaheight} - 4" />
+			<drawrectangle x="70%" y="80%" width="{viewoffset}/{duration}*{areawidth}*0.05" height="1%" color="{clrFontMenuItemBright}" />
 		</area>
-		<area condition="{isshow}" layer="3"><!--auch Biblio-->
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawtext name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title}" />
+		<area condition="{ismovie}||{isepisode}" layer="5">
+			<drawellipse condition="lt({viewCount}, 1)" name="newIcon" x="{areawidth}*0.015" y="{areaheight}*0.30" width="{areawidth}*0.03 - 5" height="{areaheight}*0.40" color="{clrNewRec}" quadrant="0" />
+			<drawellipse condition="lt({viewCount}, 1)" x="{posx(newIcon)}" y="{posy(newIcon)}" width="{width(newIcon)} - 2" height="{height(newIcon)} - 2" color="{clrTransparent}" quadrant="0" />
+			<drawtext condition="lt({viewCount}, 1)" name="newText" x="{posx(newIcon)} + {width(newIcon)}/2 - {width(newText)}/2 - 1" y="{posy(newIcon)} + {height(newIcon)}/2 - {height(newText)}/2 - 1" width="{width(newText)}" color="{clrNewRec}" font="{regular}" fontsize="{areaheight}*0.30" text="{tr(NEW)}" />
 		</area>
-		<area condition="{isseason}" layer="3">
-			<drawimage name="thumb" condition="not{hasthumb}" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawimage name="thumb" condition="{hasthumb}" imagetype="image" path="{thumb}" x="1%" y="0" width="{areaheight}*0.6" height="{areaheight}" />
-			<drawtext name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title}" />
+		<area condition="{ismovie}||{isepisode}" layer="5">
+			<drawtext name="title" x="5%" valign="center" width="{areawidth}*0.71 - 5" font="{regular}" fontsize="80%" color="{clrWhite}" text="{title}" />
+			<drawimage name="stars" condition="gt({rating}, 0)" imagetype="skinpart" path="plug_plex/starsFull" x="76%" y="22%" width="{areawidth}*0.05" height="{areaheight}*0.20" />
+			<drawrectangle condition="gt({rating}, 0)" x="{posx(stars)}+{width(stars)}*{rating}/100" y="{posy(stars)}" width="{width(stars)}-{rating}/100*{width(stars)}" height="{height(stars)}" color="{clrTransparent}" />
+			<drawtext name="dura" x="{areawidth}*0.785 - {width(dura)}/2" y="{areaheight}*0.44" width="{width(dura)}" font="{regular}" fontsize="45%" color="{clrWhite}" text="{duration}min" />
+			<drawtext x="{areawidth}*0.83" y="{areaheight}*0.12" width="5%" font="{regular}" fontsize="40%" color="{clrWhite}" text="{container}" />
+			<drawtext x="{areawidth}*0.83" y="{areaheight}*0.48" width="5%" font="{regular}" fontsize="40%" color="{clrWhite}" text="{audioCodec}" />
+			<drawtext x="{areawidth}*0.89" valign="center" width="5%" font="{regular}" fontsize="45%" color="{clrWhite}" text="{videoResolution}" />
+			<drawtext condition="gt({year}, 0)" x="{areawidth}*0.94" valign="center" width="5%" font="{regular}" fontsize="65%" color="{clrWhite}" text="{year}" />
 		</area>
-		<area condition="{isdummy}" layer="3"><!--../-->
-			<drawimage name="thumb" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawtext name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{title}" />
-		</area>
-		<area condition="{isserver}" layer="3">
-			<drawimage name="thumb" imagetype="skinpart" path="plexplaceholder" x="1%" y="0" width="{areaheight}*0.6666" height="{areaheight}" />
-			<drawtext condition="isset{title}" name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{serverstartpointname} - {title}" />
-			<drawtext condition="empty{title}" name="title" x="5%" y="8%" valign="center" font="{light}" fontsize="65%" color="{clrLightGray}" text="{serverstartpointname}" />
-			<!--<drawtext x="10%" y="{posy(title)} + {height(title)}" width="80%" font="{light}" fontsize="15%" color="{clrLightGray}" text="{serverstartpointname}" />-->
+		<area condition="{ismovie}||{isepisode}" layer="6">
+			<drawimage name="stars" condition="gt({rating}, 0)" imagetype="skinpart" path="plug_plex/stars" x="76%" y="22%" width="{areawidth}*0.05" height="{areaheight}*0.20" />
 		</area>
 	</grid>
 
