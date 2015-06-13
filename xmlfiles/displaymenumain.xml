@@ -193,6 +193,7 @@
             <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="{totalmem}MB" />
 	</area>
 	<!-- swap -->
+<!--
 	<area condition="{vectraSetup}++{mainmenuWidgetUps}" background="true" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
 	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(Swap)}" />
 	</area>
@@ -216,6 +217,7 @@
             <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="{usedswap}MB" />
             <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="{totalswap}MB" />
 	</area>
+-->
     </systemmemory>
 
     <temperatures condition="{mainmenuWidgetSysInfo}" detached="true" delay="{mainmenuWidgetDelayInfo}">
@@ -461,6 +463,30 @@
             <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="0" />
             <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="°C" />
             <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="80" />
+	</area>
+    <!-- speichertemperatur -->
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}" background="true" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
+	    <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{tr(Speichertemp)}" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}" x="{areawidth}*{mainmenuWidgetInfoPosx3} + {areawidth}*{mainmenuWidgetInfoWidthName}" y="{areaheight}*{mainmenuWidgetInfoPosy1}" width="{areawidth}*0.11 - {areawidth}*{mainmenuWidgetInfoWidthName}" height="{areaheight}*{mainmenuWidgetInfoFontSizeName}" layer="2">
+            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontName}" text="{ct1wRoof}°C" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}" background="true" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy1} + {areaheight}*{mainmenuWidgetInfoFontSizeName}" width="{areawidth}*0.11" height="5" layer="2">
+            <drawrectangle x="0" y="0" width="{areawidth}" height="{areaheight}" color="{clrWidgetStatusBarBg}" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}++lt({ct1wRoof}, 21)" x="{areawidth}*{mainmenuWidgetInfoPosx3} + 1" y="{areaheight}*{mainmenuWidgetInfoPosy1} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 1" width="{areawidth}*0.11 - 2" height="3" layer="2">
+            <drawrectangle x="0" y="0" width="{ct1wRoof}/60*{areawidth}" height="{areaheight}" color="{clrWidgetStatusBarGreen}" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}++gt({ct1wRoof}, 20)++lt({ct1wRoof}, 36)" x="{areawidth}*{mainmenuWidgetInfoPosx3} + 1" y="{areaheight}*{mainmenuWidgetInfoPosy1} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 1" width="{areawidth}*0.11 - 2" height="3" layer="2">
+            <drawrectangle x="0" y="0" width="{ct1wRoof}/60*{areawidth}" height="{areaheight}" color="{clrWidgetStatusBarOrange}" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}++gt({ct1wRoof}, 35)" x="{areawidth}*{mainmenuWidgetInfoPosx3} + 1" y="{areaheight}*{mainmenuWidgetInfoPosy1} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 1" width="{areawidth}*0.11 - 2" height="3" layer="2">
+            <drawrectangle x="0" y="0" width="{ct1wRoof}/60*{areawidth}" height="{areaheight}" color="{clrWidgetStatusBarRed}" />
+	</area>
+	<area condition="{vectraSetup}++{mainmenuWidgetUps}" x="{areawidth}*{mainmenuWidgetInfoPosx3}" y="{areaheight}*{mainmenuWidgetInfoPosy1} + {areaheight}*{mainmenuWidgetInfoFontSizeName} + 5" width="{areawidth}*0.11" height="{areaheight}*{mainmenuWidgetInfoFontSizeScala}" layer="2">
+            <drawtext align="left" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="0" />
+            <drawtext align="center" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="°C" />
+            <drawtext align="right" valign="center" font="{regular}" fontsize="{areaheight}" color="{clrWidgetFontScala}" text="60" />
 	</area>
     </customtokens>
 

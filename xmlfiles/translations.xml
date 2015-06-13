@@ -443,4 +443,12 @@
             <trans lang="en_EN">Plex for VDR</trans>
             <trans lang="de_DE">Plex für VDR</trans>
         </token>
+        <token name="tr(Speichertemp)">
+            <trans lang="en_EN">Roof Temperatur</trans>
+            <trans lang="de_DE">Speicher Temperatur</trans>
+        </token>
+        <token name="tr(Back)">
+            <trans lang="en_EN">Back</trans>
+            <trans lang="de_DE">Zurück</trans>
+        </token>
 </translations>

@@ -19,6 +19,7 @@
 	<var type="double" name="mainmenuWidgetInfoWidthName">0.085</var>
 
 	<var type="int" name="mainmenuWidgetDisc">1</var>
+	<var type="int" name="mainmenuFadeTime">0</var>
 
 	<var type="int" name="mainmenuWidgetShiftTimers">500</var>
 	<var type="int" name="mainmenuWidgetDelayTimers">500</var>
